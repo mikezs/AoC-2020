@@ -1,10 +1,10 @@
 import Foundation
 
-public final class Day3 {
+public final class Day3: Day {
     let input: [[Bool]]
 
     public init(input: String) {
-        self.input = input.trimmingCharacters(in: .newlines).components(separatedBy: .newlines).map {
+        self.input = input.trimmedLines.map {
             var array = [Bool]()
             for char in $0 { array.append(char == "#") }
             return array

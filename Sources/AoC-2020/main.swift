@@ -18,16 +18,28 @@ final class AOC2020 {
         }
     }
     
-    private func run(day: Int) {
-        switch day {
-        case 3:
-            print("Part 1:")
-            print(Day3(input: ).part1())
-            print("Part 2:")
-            print(Day3(input: input(for: day)!).part2())
-        default:
-            print("Not implemented")
+    private func run(day number: Int) {
+        let days: [Int: Day.Type] = [
+            3: Day3.self,
+            4: Day4.self
+        ]
+
+        guard let input = self.input(for: number) else {
+            fatalError("Could not load input for day \(number)")
         }
+
+        guard let day = days[number]?.init(input: input) else {
+            fatalError("Day \(number) is not yet implemented")
+        }
+
+        print("Day \(number) part 1")
+        var date = Date()
+        print(day.part1())
+        print("(Took \(Date().timeIntervalSince(date)) seconds.)")
+        print("Day \(number) part 2")
+        date = Date()
+        print(day.part2())
+        print("(Took \(Date().timeIntervalSince(date)) seconds.)")
     }
     
     func input(for day: Int) -> String? {

@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		BE6177F925792EB200016CA3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6177F825792EB200016CA3 /* Day.swift */; };
+		BE617805257932B400016CA3 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE617804257932B400016CA3 /* Day4.swift */; };
 		OBJ_26 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_28 /* AoC2020Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */; };
 		OBJ_36 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -59,6 +61,9 @@
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6177EC2579291500016CA3 /* day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
+		BE6177F825792EB200016CA3 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		BE617804257932B400016CA3 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		BE6178152579336F00016CA3 /* day4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day4.txt; sourceTree = "<group>"; };
 		OBJ_11 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		OBJ_14 /* AoC_2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC_2020Tests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BE6177EC2579291500016CA3 /* day3.txt */,
+				BE6178152579336F00016CA3 /* day4.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -105,7 +111,9 @@
 		OBJ_10 /* AoC2020Kit */ = {
 			isa = PBXGroup;
 			children = (
+				BE6177F825792EB200016CA3 /* Day.swift */,
 				OBJ_11 /* Day3.swift */,
+				BE617804257932B400016CA3 /* Day4.swift */,
 			);
 			name = AoC2020Kit;
 			path = Sources/AoC2020Kit;
@@ -288,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BE6177F925792EB200016CA3 /* Day.swift in Sources */,
+				BE617805257932B400016CA3 /* Day4.swift in Sources */,
 				OBJ_47 /* Day3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
