@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		BE6177E02579165B00016CA3 /* day3.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE6177D42579051200016CA3 /* day3.txt */; };
 		OBJ_26 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_28 /* AoC2020Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */; };
 		OBJ_36 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -59,7 +58,7 @@
 		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE6177D42579051200016CA3 /* day3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
+		BE6177EC2579291500016CA3 /* day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
 		OBJ_11 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		OBJ_14 /* AoC_2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC_2020Tests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -95,12 +94,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE6177D32579051200016CA3 /* Resources */ = {
+		BE6177EB2579290100016CA3 /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				BE6177D42579051200016CA3 /* day3.txt */,
+				BE6177EC2579291500016CA3 /* day3.txt */,
 			);
-			path = Resources;
+			path = Input;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* AoC2020Kit */ = {
@@ -145,6 +144,7 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
+				BE6177EB2579290100016CA3 /* Input */,
 				OBJ_12 /* Tests */,
 				OBJ_16 /* Products */,
 				OBJ_20 /* README.md */,
@@ -164,7 +164,6 @@
 		OBJ_8 /* AoC-2020 */ = {
 			isa = PBXGroup;
 			children = (
-				BE6177D32579051200016CA3 /* Resources */,
 				OBJ_9 /* main.swift */,
 			);
 			name = "AoC-2020";
@@ -180,7 +179,6 @@
 			buildPhases = (
 				OBJ_25 /* Sources */,
 				OBJ_27 /* Frameworks */,
-				BE6177DF2579165700016CA3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -268,17 +266,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		BE6177DF2579165700016CA3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6177E02579165B00016CA3 /* day3.txt in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_25 /* Sources */ = {

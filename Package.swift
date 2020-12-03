@@ -14,8 +14,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "AoC-2020",
-            dependencies: ["AoC2020Kit"],
-            resources: [.process("Resources")]),
+            dependencies: ["AoC2020Kit"]),
         .target(name: "AoC2020Kit"),
         .testTarget(
             name: "AoC2020KitTests",

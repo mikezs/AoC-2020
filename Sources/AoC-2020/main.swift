@@ -21,26 +21,23 @@ final class AOC2020 {
     private func run(day: Int) {
         switch day {
         case 3:
-            print(Day3(input: input(for: day)!).part1())
+            print("Part 1:")
+            print(Day3(input: ).part1())
+            print("Part 2:")
+            print(Day3(input: input(for: day)!).part2())
         default:
             print("Not implemented")
         }
     }
     
     func input(for day: Int) -> String? {
-        if let fileURL = Bundle.main.url(forResource: "AoC-2020/day\(day)", withExtension: "txt") {
-            return try? String(contentsOf: fileURL)
-        } else {
-            print("Could not load day\(day).txt from bundle")
-        }
-        
-        return nil
-    }
-}
+        let currentFolder = FileManager.default.currentDirectoryPath
 
-if let files = try? FileManager.default.contentsOfDirectory(atPath: Bundle.main.resourcePath! ){
-    for file in files {
-        print(file)
+        if let fileURL = URL(string: "file://\(currentFolder)/day\(day).txt") {
+            return try? String(contentsOf: fileURL)
+        }
+
+        return nil
     }
 }
 

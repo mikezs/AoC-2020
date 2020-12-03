@@ -18,6 +18,7 @@ final class AoC_2020Tests: XCTestCase {
 .#..#...#.#
 """
         XCTAssertEqual(Day3(input: input).part1(), 7)
+        XCTAssertEqual(Day3(input: input).part2(), 336)
     }
     
 //    func testExample() throws {
