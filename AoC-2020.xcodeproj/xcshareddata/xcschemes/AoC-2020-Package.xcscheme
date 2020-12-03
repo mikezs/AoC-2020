@@ -20,6 +20,20 @@
                ReferencedContainer = "container:AoC-2020.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AoC-2020::AoC2020Kit"
+               BuildableName = "AoC2020Kit.framework"
+               BlueprintName = "AoC2020Kit"
+               ReferencedContainer = "container:AoC-2020.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AoC-2020::AoC-2020Tests"
-               BuildableName = "AoC-2020Tests.xctest"
-               BlueprintName = "AoC-2020Tests"
+               BlueprintIdentifier = "AoC-2020::AoC2020KitTests"
+               BuildableName = "AoC2020KitTests.xctest"
+               BlueprintName = "AoC2020KitTests"
                ReferencedContainer = "container:AoC-2020.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -50,16 +64,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AoC-2020::AoC-2020"
-            BuildableName = "AoC-2020"
-            BlueprintName = "AoC-2020"
-            ReferencedContainer = "container:AoC-2020.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

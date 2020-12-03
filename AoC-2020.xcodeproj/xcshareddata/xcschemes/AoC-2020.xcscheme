@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AoC-2020::AoC-2020Tests"
-               BuildableName = "AoC-2020Tests.xctest"
-               BlueprintName = "AoC-2020Tests"
+               BlueprintIdentifier = "AoC-2020::AoC2020KitTests"
+               BuildableName = "AoC2020KitTests.xctest"
+               BlueprintName = "AoC2020KitTests"
                ReferencedContainer = "container:AoC-2020.xcodeproj">
             </BuildableReference>
          </TestableReference>

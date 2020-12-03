@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"AoC-2020::AoC-2020PackageTests::ProductTarget" /* AoC-2020PackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_32 /* Build configuration list for PBXAggregateTarget "AoC-2020PackageTests" */;
+			buildConfigurationList = OBJ_38 /* Build configuration list for PBXAggregateTarget "AoC-2020PackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_35 /* PBXTargetDependency */,
+				OBJ_41 /* PBXTargetDependency */,
 			);
 			name = "AoC-2020PackageTests";
 			productName = "AoC-2020PackageTests";
@@ -21,91 +21,121 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		271786482578CB05008F86C0 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271786472578CB05008F86C0 /* Day3.swift */; };
-		OBJ_23 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
-		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_41 /* AoC_2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* AoC_2020Tests.swift */; };
-		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
+		BE6177E02579165B00016CA3 /* day3.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE6177D42579051200016CA3 /* day3.txt */; };
+		OBJ_26 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_28 /* AoC2020Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */; };
+		OBJ_36 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_47 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Day3.swift */; };
+		OBJ_53 /* AoC_2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* AoC_2020Tests.swift */; };
+		OBJ_54 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* XCTestManifests.swift */; };
+		OBJ_56 /* AoC2020Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		271786452578CA28008F86C0 /* PBXContainerItemProxy */ = {
+		BE6177CB257902E300016CA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "AoC-2020::AoC-2020";
-			remoteInfo = "AoC-2020";
+			remoteGlobalIDString = "AoC-2020::AoC2020Kit";
+			remoteInfo = AoC2020Kit;
 		};
-		271786462578CA2E008F86C0 /* PBXContainerItemProxy */ = {
+		BE6177CC257902E300016CA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "AoC-2020::AoC-2020Tests";
-			remoteInfo = "AoC-2020Tests";
+			remoteGlobalIDString = "AoC-2020::AoC2020Kit";
+			remoteInfo = AoC2020Kit;
+		};
+		BE6177CF257902E400016CA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "AoC-2020::AoC2020KitTests";
+			remoteInfo = AoC2020KitTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		271786472578CB05008F86C0 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
-		2717864B2578E0CC008F86C0 /* day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
-		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
-		"AoC-2020::AoC-2020Tests::Product" /* AoC_2020Tests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = AoC_2020Tests.xctest; path = "AoC-2020Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* AoC_2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC_2020Tests.swift; sourceTree = "<group>"; };
-		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6177D42579051200016CA3 /* day3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
+		OBJ_11 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		OBJ_14 /* AoC_2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC_2020Tests.swift; sourceTree = "<group>"; };
+		OBJ_15 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_24 /* Frameworks */ = {
+		OBJ_27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_28 /* AoC2020Kit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_43 /* Frameworks */ = {
+		OBJ_55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_56 /* AoC2020Kit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2717864A2578E0BA008F86C0 /* Resources */ = {
+		BE6177D32579051200016CA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2717864B2578E0CC008F86C0 /* day3.txt */,
+				BE6177D42579051200016CA3 /* day3.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		OBJ_10 /* Tests */ = {
+		OBJ_10 /* AoC2020Kit */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* AoC-2020Tests */,
+				OBJ_11 /* Day3.swift */,
+			);
+			name = AoC2020Kit;
+			path = Sources/AoC2020Kit;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_12 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* AoC2020KitTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_11 /* AoC-2020Tests */ = {
+		OBJ_13 /* AoC2020KitTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* AoC_2020Tests.swift */,
-				OBJ_13 /* XCTestManifests.swift */,
+				OBJ_14 /* AoC_2020Tests.swift */,
+				OBJ_15 /* XCTestManifests.swift */,
 			);
-			name = "AoC-2020Tests";
-			path = "Tests/AoC-2020Tests";
+			name = AoC2020KitTests;
+			path = Tests/AoC2020KitTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* Products */ = {
+		OBJ_16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */,
+				"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */,
 				"AoC-2020::AoC-2020::Product" /* AoC-2020 */,
-				"AoC-2020::AoC-2020Tests::Product" /* AoC_2020Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -115,9 +145,9 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_10 /* Tests */,
-				OBJ_14 /* Products */,
-				OBJ_17 /* README.md */,
+				OBJ_12 /* Tests */,
+				OBJ_16 /* Products */,
+				OBJ_20 /* README.md */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -126,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* AoC-2020 */,
+				OBJ_10 /* AoC2020Kit */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -133,9 +164,8 @@
 		OBJ_8 /* AoC-2020 */ = {
 			isa = PBXGroup;
 			children = (
-				2717864A2578E0BA008F86C0 /* Resources */,
+				BE6177D32579051200016CA3 /* Resources */,
 				OBJ_9 /* main.swift */,
-				271786472578CB05008F86C0 /* Day3.swift */,
 			);
 			name = "AoC-2020";
 			path = "Sources/AoC-2020";
@@ -146,42 +176,60 @@
 /* Begin PBXNativeTarget section */
 		"AoC-2020::AoC-2020" /* AoC-2020 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_19 /* Build configuration list for PBXNativeTarget "AoC-2020" */;
+			buildConfigurationList = OBJ_22 /* Build configuration list for PBXNativeTarget "AoC-2020" */;
 			buildPhases = (
-				OBJ_22 /* Sources */,
-				OBJ_24 /* Frameworks */,
+				OBJ_25 /* Sources */,
+				OBJ_27 /* Frameworks */,
+				BE6177DF2579165700016CA3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_29 /* PBXTargetDependency */,
 			);
 			name = "AoC-2020";
 			productName = AoC_2020;
 			productReference = "AoC-2020::AoC-2020::Product" /* AoC-2020 */;
 			productType = "com.apple.product-type.tool";
 		};
-		"AoC-2020::AoC-2020Tests" /* AoC-2020Tests */ = {
+		"AoC-2020::AoC2020Kit" /* AoC2020Kit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_37 /* Build configuration list for PBXNativeTarget "AoC-2020Tests" */;
+			buildConfigurationList = OBJ_43 /* Build configuration list for PBXNativeTarget "AoC2020Kit" */;
 			buildPhases = (
-				OBJ_40 /* Sources */,
-				OBJ_43 /* Frameworks */,
+				OBJ_46 /* Sources */,
+				OBJ_48 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_44 /* PBXTargetDependency */,
 			);
-			name = "AoC-2020Tests";
-			productName = AoC_2020Tests;
-			productReference = "AoC-2020::AoC-2020Tests::Product" /* AoC_2020Tests.xctest */;
+			name = AoC2020Kit;
+			productName = AoC2020Kit;
+			productReference = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"AoC-2020::AoC2020KitTests" /* AoC2020KitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_49 /* Build configuration list for PBXNativeTarget "AoC2020KitTests" */;
+			buildPhases = (
+				OBJ_52 /* Sources */,
+				OBJ_55 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_57 /* PBXTargetDependency */,
+			);
+			name = AoC2020KitTests;
+			productName = AoC2020KitTests;
+			productReference = "AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"AoC-2020::SwiftPMPackageDescription" /* AoC-2020PackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "AoC-2020PackageDescription" */;
+			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "AoC-2020PackageDescription" */;
 			buildPhases = (
-				OBJ_29 /* Sources */,
+				OBJ_35 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -208,72 +256,95 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_14 /* Products */;
+			productRefGroup = OBJ_16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				"AoC-2020::AoC-2020" /* AoC-2020 */,
 				"AoC-2020::SwiftPMPackageDescription" /* AoC-2020PackageDescription */,
 				"AoC-2020::AoC-2020PackageTests::ProductTarget" /* AoC-2020PackageTests */,
-				"AoC-2020::AoC-2020Tests" /* AoC-2020Tests */,
+				"AoC-2020::AoC2020Kit" /* AoC2020Kit */,
+				"AoC-2020::AoC2020KitTests" /* AoC2020KitTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		BE6177DF2579165700016CA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6177E02579165B00016CA3 /* day3.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_22 /* Sources */ = {
+		OBJ_25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				271786482578CB05008F86C0 /* Day3.swift in Sources */,
-				OBJ_23 /* main.swift in Sources */,
+				OBJ_26 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_29 /* Sources */ = {
+		OBJ_35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_30 /* Package.swift in Sources */,
+				OBJ_36 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_40 /* Sources */ = {
+		OBJ_46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_41 /* AoC_2020Tests.swift in Sources */,
-				OBJ_42 /* XCTestManifests.swift in Sources */,
+				OBJ_47 /* Day3.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_53 /* AoC_2020Tests.swift in Sources */,
+				OBJ_54 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_35 /* PBXTargetDependency */ = {
+		OBJ_29 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "AoC-2020::AoC-2020Tests" /* AoC-2020Tests */;
-			targetProxy = 271786462578CA2E008F86C0 /* PBXContainerItemProxy */;
+			target = "AoC-2020::AoC2020Kit" /* AoC2020Kit */;
+			targetProxy = BE6177CB257902E300016CA3 /* PBXContainerItemProxy */;
 		};
-		OBJ_44 /* PBXTargetDependency */ = {
+		OBJ_41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "AoC-2020::AoC-2020" /* AoC-2020 */;
-			targetProxy = 271786452578CA28008F86C0 /* PBXContainerItemProxy */;
+			target = "AoC-2020::AoC2020KitTests" /* AoC2020KitTests */;
+			targetProxy = BE6177CF257902E400016CA3 /* PBXContainerItemProxy */;
+		};
+		OBJ_57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "AoC-2020::AoC2020Kit" /* AoC2020Kit */;
+			targetProxy = BE6177CC257902E300016CA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_20 /* Debug */ = {
+		OBJ_23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC_2020_Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
@@ -289,17 +360,16 @@
 			};
 			name = Debug;
 		};
-		OBJ_21 /* Release */ = {
+		OBJ_24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC_2020_Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
@@ -312,24 +382,6 @@
 				TARGET_NAME = "AoC-2020";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1.0";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -363,64 +415,26 @@
 		OBJ_33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -package-description-version 5.1.0";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		OBJ_34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -package-description-version 5.1.0";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		OBJ_38 /* Debug */ = {
+		OBJ_39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC_2020Tests_Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = "AoC-2020Tests";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
-		};
-		OBJ_39 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC_2020Tests_Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = "AoC-2020Tests";
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -446,18 +460,121 @@
 			};
 			name = Release;
 		};
+		OBJ_40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC2020Kit_Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = AoC2020Kit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = AoC2020Kit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC2020Kit_Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = AoC2020Kit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = AoC2020Kit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC2020KitTests_Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = AoC2020KitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "AoC-2020.xcodeproj/AoC2020KitTests_Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = AoC2020KitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_19 /* Build configuration list for PBXNativeTarget "AoC-2020" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_20 /* Debug */,
-				OBJ_21 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "AoC-2020" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -467,16 +584,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_26 /* Build configuration list for PBXNativeTarget "AoC-2020PackageDescription" */ = {
+		OBJ_22 /* Build configuration list for PBXNativeTarget "AoC-2020" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_27 /* Debug */,
-				OBJ_28 /* Release */,
+				OBJ_23 /* Debug */,
+				OBJ_24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_32 /* Build configuration list for PBXAggregateTarget "AoC-2020PackageTests" */ = {
+		OBJ_32 /* Build configuration list for PBXNativeTarget "AoC-2020PackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_33 /* Debug */,
@@ -485,11 +602,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_37 /* Build configuration list for PBXNativeTarget "AoC-2020Tests" */ = {
+		OBJ_38 /* Build configuration list for PBXAggregateTarget "AoC-2020PackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_38 /* Debug */,
-				OBJ_39 /* Release */,
+				OBJ_39 /* Debug */,
+				OBJ_40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_43 /* Build configuration list for PBXNativeTarget "AoC2020Kit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_44 /* Debug */,
+				OBJ_45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_49 /* Build configuration list for PBXNativeTarget "AoC2020KitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_50 /* Debug */,
+				OBJ_51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

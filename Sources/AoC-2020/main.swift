@@ -1,4 +1,5 @@
 import Foundation
+import AoC2020Kit
 
 final class AOC2020 {
     init(args: [String] = CommandLine.arguments) {
@@ -20,18 +21,26 @@ final class AOC2020 {
     private func run(day: Int) {
         switch day {
         case 3:
-            print(Day3().part1(input: input(for: day)!))
+            print(Day3(input: input(for: day)!).part1())
         default:
             print("Not implemented")
         }
     }
     
     func input(for day: Int) -> String? {
-        if let fileURL = Bundle.main.url(forResource: "day\(day)", withExtension: "txt") {
+        if let fileURL = Bundle.main.url(forResource: "AoC-2020/day\(day)", withExtension: "txt") {
             return try? String(contentsOf: fileURL)
+        } else {
+            print("Could not load day\(day).txt from bundle")
         }
         
         return nil
+    }
+}
+
+if let files = try? FileManager.default.contentsOfDirectory(atPath: Bundle.main.resourcePath! ){
+    for file in files {
+        print(file)
     }
 }
 
