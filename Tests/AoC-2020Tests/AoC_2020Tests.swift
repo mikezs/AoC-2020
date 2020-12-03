@@ -1,7 +1,25 @@
 import XCTest
+@testable import AoC_2020
 import class Foundation.Bundle
 
 final class AoC_2020Tests: XCTestCase {
+    func testDay3Part1() {
+        let input = """
+..##.......
+#...#...#..
+.#....#..#.
+..#.#...#.#
+.#...##..#.
+..#.##.....
+.#.#.#....#
+.#........#
+#.##...#...
+#...##....#
+.#..#...#.#
+"""
+        XCTAssertEqual(Day3().part1(input: input), 7)
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
