@@ -1,11 +1,11 @@
 import Foundation
 
 public final class Day4: Day {
-    private var input = [String]()
+    private var input = [[String: String]]()
 
     public init(input: String) {
-        self.input = input.trimmedLines.map {
-            $0
+        self.input = input.trimmingCharacters(in: .newlines).components(separatedBy: "\n\n").map {
+            let $0.components(separatedBy: " \n").map {let parts = $0.components(separatedBy: ":") }
         }
     }
 
