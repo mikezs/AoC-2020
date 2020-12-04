@@ -10,6 +10,31 @@ extension String {
     var trimmedLines: [String] { trimmingCharacters(in: .newlines).components(separatedBy: .newlines) }
 }
 
+extension String {
+    func matches(for regexString: String) -> [[String]] {
+        let regex = NSRegularExpression(regexString)
+        let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count))
+
+        var stringMatches = [[String]]()
+
+        for match in matches {
+            var subMatches = [String]()
+
+            for rangeNumber in 1 ..< match.numberOfRanges {
+                let range = match.range(at: rangeNumber)
+
+                if let stringRange = Range(range, in: self) {
+                    subMatches.append(String(self[stringRange]))
+                }
+            }
+
+            stringMatches.append(subMatches)
+        }
+
+        return stringMatches
+    }
+}
+
 // https://stackoverflow.com/a/24144365
 extension StringProtocol {
     subscript(offset: Int) -> Character { self[index(startIndex, offsetBy: offset)] }

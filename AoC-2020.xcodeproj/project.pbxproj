@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		BE589834257A4BB5005AE633 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE589833257A4BB5005AE633 /* ExtensionTests.swift */; };
 		BE6177F925792EB200016CA3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6177F825792EB200016CA3 /* Day.swift */; };
 		BE617805257932B400016CA3 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE617804257932B400016CA3 /* Day4.swift */; };
 		OBJ_26 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
@@ -60,6 +61,7 @@
 		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE589833257A4BB5005AE633 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		BE6177EC2579291500016CA3 /* day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day3.txt; sourceTree = "<group>"; };
 		BE6177F825792EB200016CA3 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		BE617804257932B400016CA3 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				OBJ_14 /* AoC_2020Tests.swift */,
 				OBJ_15 /* XCTestManifests.swift */,
+				BE589833257A4BB5005AE633 /* ExtensionTests.swift */,
 			);
 			name = AoC2020KitTests;
 			path = Tests/AoC2020KitTests;
@@ -147,7 +150,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -157,7 +160,6 @@
 				OBJ_16 /* Products */,
 				OBJ_20 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -261,7 +263,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				BE589834257A4BB5005AE633 /* ExtensionTests.swift in Sources */,
 				OBJ_53 /* AoC_2020Tests.swift in Sources */,
 				OBJ_54 /* XCTestManifests.swift in Sources */,
 			);
