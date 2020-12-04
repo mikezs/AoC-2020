@@ -84,10 +84,7 @@ struct Document {
     }
 
     private func hairColor(isValid hairColor: String) -> Bool {
-        let valid = CharacterSet(charactersIn: "#0123456789abcdef")
-        let charactersValid = valid.isSuperset(of: CharacterSet(charactersIn: hairColor))
-
-        return hairColor.count == 7 && hairColor.hasPrefix("#") && charactersValid
+        hairColor ~= "#[0-9a-f]{6}"
     }
 }
 
