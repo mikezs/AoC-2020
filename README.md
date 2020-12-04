@@ -1,7 +1,7 @@
 # AoC-2020
 [![Build Status](https://travis-ci.com/mikezs/AoC-2020.svg?branch=develop)](https://travis-ci.com/mikezs/AoC-2020)
 [![codecov](https://codecov.io/gh/mikezs/AoC-2020/branch/develop/graph/badge.svg?token=64OZZEYDTF)](https://codecov.io/gh/mikezs/AoC-2020)
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=com.lapots.breed.judge:judge-rule-engine&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.lapots.breed.judge:judge-rule-engine)
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=mikezs_AoC-2020&metric=alert_status)](https://sonarcloud.io/dashboard?id=mikezs_AoC-2020)
 
 ## Advent Of Code 2020
 
