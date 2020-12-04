@@ -3,5 +3,6 @@ os:
 language: swift
 osx_image: xcode12
 script:
-  - swift test
-
+  - swift test --enable-code-coverage
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
