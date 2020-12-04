@@ -45,7 +45,7 @@ iyr:2011 ecl:brn hgt:59in
         XCTAssertEqual(Day4(input: day4Part1Input).part1(), 2)
     }
 
-let day4Part2FailuresInput = """
+    let day4Part2FailuresInput = """
 eyr:1972 cid:100
 hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926
 
@@ -65,7 +65,7 @@ pid:3556412378 byr:2007
         XCTAssertEqual(Day4(input: day4Part2FailuresInput).part2(), 0)
     }
 
-let day4Part2SuccessInput = """
+    let day4Part2SuccessInput = """
 pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980
 hcl:#623a2f
 
@@ -82,5 +82,18 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
 
     func testDay4Part2Success() {
         XCTAssertEqual(Day4(input: day4Part2SuccessInput).part2(), 4)
+    }
+
+//mark: - Day 5
+
+    let day5input = """
+    """
+
+    func testDay5Part1() {
+        XCTAssertEqual(Day5(input: day5input).part1(), 0)
+    }
+
+    func testDay5Part2() {
+        XCTAssertEqual(Day5(input: day5input).part2(), 0)
     }
 }
