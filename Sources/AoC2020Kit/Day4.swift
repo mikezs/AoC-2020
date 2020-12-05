@@ -89,7 +89,7 @@ struct Document {
 }
 
 public final class Day4: Day {
-    private var input = [[String: String]]()
+    private let input: [[String: String]]
 
     public init(input: String) {
         self.input = input.trimmingCharacters(in: .newlines).components(separatedBy: "\n\n").map {

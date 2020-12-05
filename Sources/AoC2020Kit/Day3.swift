@@ -1,7 +1,7 @@
 import Foundation
 
 public final class Day3: Day {
-    let input: [[Bool]]
+    private let input: [[Bool]]
 
     public init(input: String) {
         self.input = input.trimmedLines.map {

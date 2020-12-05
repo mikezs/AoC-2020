@@ -26,6 +26,11 @@ To run day 1:
 - This is called (according to timsearle) two sum and is a common interview question. I did the simplist (read: fastest to implement) solution which is nexted loops.
 - More nested loops, luckily 2020 isn't divisible by 3, otherwise my solution might give more than 1 answer (thanks SFrost007)
 
+### Day 2
+*Originally done in a playground, but then added to make complete solution*
+- Lots of string parsing. A regex might have been more efficient, but I ended up just doing lots of `components(separatedBy:)` which worked for me
+- Same again, but another couple of rules
+
 ### Day 4
 - First part was doing the parsing as quickly as possible into a dictionary of `[String:String]` and then checking for the required keys
 - Second part I decoded properly into a model and has validation rules that were checked. 

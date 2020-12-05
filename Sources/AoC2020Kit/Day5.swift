@@ -1,7 +1,7 @@
 import Foundation
 
 public final class Day5: Day {
-    let input: [Int]
+    private let input: [Int]
     
     public init(input: String) {
         self.input = input.trimmedLines.map { Day5.seatID(instructions: $0) }

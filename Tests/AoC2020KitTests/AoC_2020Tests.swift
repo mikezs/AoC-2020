@@ -20,6 +20,20 @@ final class AoC_2020Tests: XCTestCase {
         XCTAssertEqual(Day1(input: day1Input).part2(), 241861950)
     }
     
+    let day2Input = """
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+"""
+    
+    func testDay2Part1() {
+        XCTAssertEqual(Day2(input: day2Input).part1(), 2)
+    }
+
+    func testDay2Part2() {
+        XCTAssertEqual(Day2(input: day2Input).part2(), 1)
+    }
+    
     let day3input = """
 ..##.......
 #...#...#..
