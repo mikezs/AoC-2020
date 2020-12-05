@@ -31,6 +31,11 @@ To run day 1:
 - Lots of string parsing. A regex might have been more efficient, but I ended up just doing lots of `components(separatedBy:)` which worked for me
 - Same again, but another couple of rules
 
+### Day 3
+*Written on day 5*
+- Quite a basic algorithm, originally written without any input, but then modified
+- Same algorithm, but just run multiple times with different parameters
+
 ### Day 4
 - First part was doing the parsing as quickly as possible into a dictionary of `[String:String]` and then checking for the required keys
 - Second part I decoded properly into a model and has validation rules that were checked. 
