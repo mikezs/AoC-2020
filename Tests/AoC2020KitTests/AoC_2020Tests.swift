@@ -84,16 +84,22 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
         XCTAssertEqual(Day4(input: day4Part2SuccessInput).part2(), 4)
     }
 
-//mark: - Day 5
-
+// MARK: - Day 5
     let day5input = """
-    """
-
-    func testDay5Part1() {
-        XCTAssertEqual(Day5(input: day5input).part1(), 0)
+FBFBBFFRLR
+BFFFBBFRRR
+FFFBBBFRRR
+BBFFBBFRLL
+"""
+    
+    func testDay5SeatID() {
+        XCTAssertEqual(Day5.seatID(instructions: "FBFBBFFRLR"), 357)
+        XCTAssertEqual(Day5.seatID(instructions: "BFFFBBFRRR"), 567)
+        XCTAssertEqual(Day5.seatID(instructions: "FFFBBBFRRR"), 119)
+        XCTAssertEqual(Day5.seatID(instructions: "BBFFBBFRLL"), 820)
     }
-
-    func testDay5Part2() {
-        XCTAssertEqual(Day5(input: day5input).part2(), 0)
+    
+    func testDay5Part1() {
+        XCTAssertEqual(Day5(input: day5input).part1(), 820)
     }
 }
