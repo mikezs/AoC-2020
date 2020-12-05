@@ -22,3 +22,7 @@ To run day 1:
 - Second part I decoded properly into a model and has validation rules that were checked. 
 
   I also had a bug that was pointed out by @SFrost007 that meant my hex colour validation by checking if the set of characters was a subset of all allowed would have let `#######` be called valid when it wasn't. Updated with a regex 
+
+### Day 5
+- First part of the problem I implemented by having an upper and lower bound for x and Y that I just adjusted each loop depending on the front/back and checked they were the same when the loop finished. I first made a test for generating the seat ID, then another test to find the highest
+- Second part I was sad you couldn't use TDD, so I've removed the part2 test, but I will implement a function for the tests that generated inputs with a seat missing and trim the ends ("some" rows are missing).
