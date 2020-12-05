@@ -3,6 +3,23 @@ import AoC2020Kit
 import class Foundation.Bundle
 
 final class AoC_2020Tests: XCTestCase {
+    let day1Input = """
+1721
+979
+366
+299
+675
+1456
+"""
+    
+    func testDay1Part1() {
+        XCTAssertEqual(Day1(input: day1Input).part1(), 514579)
+    }
+
+    func testDay1Part2() {
+        XCTAssertEqual(Day1(input: day1Input).part2(), 241861950)
+    }
+    
     let day3input = """
 ..##.......
 #...#...#..

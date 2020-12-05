@@ -21,6 +21,11 @@ To run day 1:
 
 ## Implementation notes
 
+### Day 1
+*Originally done in a playground, but then added to make complete solution*
+- This is called (according to timsearle) two sum and is a common interview question. I did the simplist (read: fastest to implement) solution which is nexted loops.
+- More nested loops, luckily 2020 isn't divisible by 3, otherwise my solution might give more than 1 answer (thanks SFrost007)
+
 ### Day 4
 - First part was doing the parsing as quickly as possible into a dictionary of `[String:String]` and then checking for the required keys
 - Second part I decoded properly into a model and has validation rules that were checked. 
