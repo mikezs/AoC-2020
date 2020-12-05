@@ -5,9 +5,13 @@
 
 ## Advent Of Code 2020
 
+This are my solutions to the [Advent Of Code 2020](https://adventofcode.com/2020/) event. This year I've been playing along with [timsearle](https://github.com/timsearle/AdventOfCode2020) and [SFrost007](https://github.com/SFrost007/AdventOfCode2020/), please check out their solutions if you're interested.
+
 ### Project approach
 
 This swift package manager project contains my MacOS command line tool, a framework with all of the logic to solve the puzzles and a test framework to validate against the AoC examples that are given in the puzzle descriptions.
+
+The idea is to use the example problems/solutions provided in the puzzles to do TDD, but sometimes (Day 5) there are no examples that allow TDD.
 
 ### Running
 
