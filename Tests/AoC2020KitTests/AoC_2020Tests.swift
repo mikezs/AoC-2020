@@ -133,4 +133,30 @@ BBFFBBFRLL
     func testDay5Part1() {
         XCTAssertEqual(Day5(input: day5input).part1(), 820)
     }
+    
+    let day6Input = """
+abc
+
+a
+b
+c
+
+ab
+ac
+
+a
+a
+a
+a
+
+b
+"""
+    
+    func testDay6Part1() {
+        XCTAssertEqual(Day6(input: day6Input).part1(), 11)
+    }
+    
+    func testDay6Part2() {
+        XCTAssertEqual(Day6(input: day6Input).part2(), 6)
+    }
 }

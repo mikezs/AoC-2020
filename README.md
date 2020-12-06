@@ -45,3 +45,7 @@ To run day 1:
 ### Day 5
 - First part of the problem I implemented by having an upper and lower bound for x and Y that I just adjusted each loop depending on the front/back and checked they were the same when the loop finished. I first made a test for generating the seat ID, then another test to find the highest
 - Second part I was sad you couldn't use TDD, so I've removed the part2 test, but I will implement a function for the tests that generated inputs with a seat missing and trim the ends ("some" rows are missing).
+
+### Day 6
+- Slightly over-engineered this answer because I expected to be getting the ASCII ordinals from the characters in part2, but that never came. Mapped the input to an array of arrays of sets of characters, this let me union all the sets and count the elements to get the answer.
+- Didn't require much work, just used the first set of the array as the final set (instead of an empty one) and then did intersections with the rest of the sets in the array.

@@ -174,11 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				OBJ_20 /* README.md */,
 				OBJ_7 /* Sources */,
 				BE6177EB2579290100016CA3 /* Input */,
 				OBJ_12 /* Tests */,
 				OBJ_16 /* Products */,
-				OBJ_20 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
