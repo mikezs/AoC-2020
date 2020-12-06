@@ -40,7 +40,8 @@ public final class Day5: Day {
             case "B":
                 xLower = xLower + ((xUpper - xLower + 1) / 2)
             default:
-                fatalError("Invalid front/back instruction \(char)")
+                print("Invalid front/back instruction \(char)")
+                return -1
             }
             
             print("\(char) keeps rows \(xLower) through \(xUpper)")
@@ -55,7 +56,8 @@ public final class Day5: Day {
             case "R":
                 yLower = yLower + ((yUpper - yLower + 1) / 2)
             default:
-                fatalError("Invalid left/right instruction \(char)")
+                print("Invalid left/right instruction \(char)")
+                return -1
             }
         }
         

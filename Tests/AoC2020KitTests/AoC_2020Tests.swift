@@ -13,10 +13,12 @@ final class AoC_2020Tests: XCTestCase {
 """
     
     func testDay1Part1() {
+        XCTAssertEqual(Day1(input: "1").part1(), -1)
         XCTAssertEqual(Day1(input: day1Input).part1(), 514579)
     }
 
     func testDay1Part2() {
+        XCTAssertEqual(Day1(input: "2").part2(), -1)
         XCTAssertEqual(Day1(input: day1Input).part2(), 241861950)
     }
     
@@ -124,6 +126,9 @@ BBFFBBFRLL
 """
     
     func testDay5SeatID() {
+        XCTAssertEqual(Day5.seatID(instructions: "FBFBBFRRLR"), -1)
+        XCTAssertEqual(Day5.seatID(instructions: "FBFBBFFFLR"), -1)
+        
         XCTAssertEqual(Day5.seatID(instructions: "FBFBBFFRLR"), 357)
         XCTAssertEqual(Day5.seatID(instructions: "BFFFBBFRRR"), 567)
         XCTAssertEqual(Day5.seatID(instructions: "FFFBBBFRRR"), 119)
