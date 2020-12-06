@@ -25,7 +25,8 @@ final class AOC2020 {
             3: Day3.self,
             4: Day4.self,
             5: Day5.self,
-            6: Day6.self
+            6: Day6.self,
+            7: Day7.self
         ]
 
         guard let input = self.input(for: number) else {
