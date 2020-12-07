@@ -2,7 +2,7 @@ import XCTest
 import AoC2020Kit
 import class Foundation.Bundle
 
-final class AoC_2020Tests: XCTestCase {
+final class AoC2020Tests: XCTestCase {
     let day1Input = """
 1721
 979

@@ -6,7 +6,11 @@ public final class Day3: Day {
     public init(input: String) {
         self.input = input.trimmedLines.map {
             var array = [Bool]()
-            for char in $0 { array.append(char == "#") }
+            
+            for char in $0 {
+                array.append(char == "#")
+            }
+            
             return array
         }
     }

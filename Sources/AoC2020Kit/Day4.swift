@@ -11,7 +11,7 @@ struct Document {
     struct Height {
         enum Unit: String {
             case cm
-            case `in`
+            case inch = "in"
         }
 
         let amount: Int
@@ -24,7 +24,7 @@ struct Document {
             if string.hasSuffix("cm") {
                 self.unit = .cm
             } else if string.hasSuffix("in") {
-                self.unit = .in
+                self.unit = .inch
             } else {
                 return nil
             }
@@ -36,7 +36,7 @@ struct Document {
             switch unit {
             case .cm:
                 return amount >= 150 && amount <= 193
-            case .in:
+            case .inch:
                 return amount >= 59 && amount <= 76
             }
         }
