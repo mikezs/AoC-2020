@@ -6,7 +6,7 @@ final class AOC2020 {
         if args.count != 2 {
             let dateComponents = Calendar.current.dateComponents([.day, .month, .year], from: Date())
             let day = dateComponents.day!
-            
+
             if dateComponents.year == 2020 && dateComponents.month == 12 && day < 25 {
                 run(day: day)
             } else {
@@ -17,7 +17,7 @@ final class AOC2020 {
             run(day: day)
         }
     }
-    
+
     private func run(day number: Int) {
         let days: [Int: Day.Type] = [
             1: Day1.self,
@@ -47,7 +47,7 @@ final class AOC2020 {
         print(day.part2())
         print("(Took \(Date().timeIntervalSince(date)) seconds.)")
     }
-    
+
     func input(for day: Int) -> String? {
         let currentFolder = FileManager.default.currentDirectoryPath
 

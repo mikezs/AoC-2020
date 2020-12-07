@@ -11,7 +11,7 @@ final class AoC2020Tests: XCTestCase {
 675
 1456
 """
-    
+
     func testDay1Part1() {
         XCTAssertEqual(Day1(input: "1").part1(), -1)
         XCTAssertEqual(Day1(input: day1Input).part1(), 514579)
@@ -21,13 +21,13 @@ final class AoC2020Tests: XCTestCase {
         XCTAssertEqual(Day1(input: "2").part2(), -1)
         XCTAssertEqual(Day1(input: day1Input).part2(), 241861950)
     }
-    
+
     let day2Input = """
 1-3 a: abcde
 1-3 b: cdefg
 2-9 c: ccccccccc
 """
-    
+
     func testDay2Part1() {
         XCTAssertEqual(Day2(input: day2Input).part1(), 2)
     }
@@ -35,7 +35,7 @@ final class AoC2020Tests: XCTestCase {
     func testDay2Part2() {
         XCTAssertEqual(Day2(input: day2Input).part2(), 1)
     }
-    
+
     let day3input = """
 ..##.......
 #...#...#..
@@ -124,21 +124,21 @@ BFFFBBFRRR
 FFFBBBFRRR
 BBFFBBFRLL
 """
-    
+
     func testDay5SeatID() {
         XCTAssertEqual(Day5.seatID(instructions: "FBFBBFRRLR"), -1)
         XCTAssertEqual(Day5.seatID(instructions: "FBFBBFFFLR"), -1)
-        
+
         XCTAssertEqual(Day5.seatID(instructions: "FBFBBFFRLR"), 357)
         XCTAssertEqual(Day5.seatID(instructions: "BFFFBBFRRR"), 567)
         XCTAssertEqual(Day5.seatID(instructions: "FFFBBBFRRR"), 119)
         XCTAssertEqual(Day5.seatID(instructions: "BBFFBBFRLL"), 820)
     }
-    
+
     func testDay5Part1() {
         XCTAssertEqual(Day5(input: day5input).part1(), 820)
     }
-    
+
     let day6Input = """
 abc
 
@@ -156,15 +156,15 @@ a
 
 b
 """
-    
+
     func testDay6Part1() {
         XCTAssertEqual(Day6(input: day6Input).part1(), 11)
     }
-    
+
     func testDay6Part2() {
         XCTAssertEqual(Day6(input: day6Input).part2(), 6)
     }
-    
+
     let day7Input = """
 light red bags contain 1 bright white bag, 2 muted yellow bags.
 dark orange bags contain 3 bright white bags, 4 muted yellow bags.
@@ -176,11 +176,11 @@ vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
 faded blue bags contain no other bags.
 dotted black bags contain no other bags.
 """
-        
+
     func testDay7Part1() {
         XCTAssertEqual(Day7(input: day7Input).part1(), 4)
     }
-    
+
     let day7Part2Input = """
 shiny gold bags contain 2 dark red bags.
 dark red bags contain 2 dark orange bags.
@@ -190,19 +190,19 @@ dark green bags contain 2 dark blue bags.
 dark blue bags contain 2 dark violet bags.
 dark violet bags contain no other bags.
 """
-        
+
     func testDay7Part2() {
         XCTAssertEqual(Day7(input: day7Input).part2(), 32)
         XCTAssertEqual(Day7(input: day7Part2Input).part2(), 126)
     }
-    
+
     let day8Input = """
 """
-        
+
     func testDay8Part1() {
         XCTAssertEqual(Day8(input: day8Input).part1(), 0)
     }
-    
+
     func testDay8Part2() {
         XCTAssertEqual(Day8(input: day8Input).part2(), 0)
     }

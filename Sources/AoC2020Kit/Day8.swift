@@ -2,7 +2,7 @@ import Foundation
 
 public final class Day8: Day {
     private let input: [String]
-    
+
     public init(input: String) {
         self.input = input.trimmedLines
     }

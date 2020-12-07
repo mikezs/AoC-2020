@@ -6,26 +6,26 @@ public final class Day3: Day {
     public init(input: String) {
         self.input = input.trimmedLines.map {
             var array = [Bool]()
-            
+
             for char in $0 {
                 array.append(char == "#")
             }
-            
+
             return array
         }
     }
 
     public func part1() -> Int {
         var trees = 0
-        var x = 0
+        var horizontal = 0
 
         for line in input {
-            if line[x] {
+            if line[horizontal] {
                 trees += 1
             }
 
-            x += 3
-            x = x % input[0].count
+            horizontal += 3
+            horizontal %= input[0].count
         }
 
         return trees
@@ -42,17 +42,17 @@ public final class Day3: Day {
 
     private func treesMoving(right: Int, down: Int) -> Int {
         var trees = 0
-        var x = 0
-        var y = 0
+        var horizontal = 0
+        var vertical = 0
 
-        while y < input.count {
-            if input[y][x] {
+        while vertical < input.count {
+            if input[vertical][horizontal] {
                 trees += 1
             }
 
-            x += right
-            x = x % input[0].count
-            y += down
+            horizontal += right
+            horizontal %= input[0].count
+            vertical += down
         }
 
         return trees

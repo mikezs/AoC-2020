@@ -7,41 +7,41 @@ extension Int {
     }
 }
 
-struct Document {
-    struct Height {
-        enum Unit: String {
-            case cm
-            case inch = "in"
-        }
-
-        let amount: Int
-        let unit: Unit
-
-        init?(_ string: String?) {
-            guard let string = string else { return nil }
-            guard let amount = Int(String(string.dropLast(2))) else { return nil }
-
-            if string.hasSuffix("cm") {
-                self.unit = .cm
-            } else if string.hasSuffix("in") {
-                self.unit = .inch
-            } else {
-                return nil
-            }
-
-            self.amount = amount
-        }
-
-        var isValid: Bool {
-            switch unit {
-            case .cm:
-                return amount >= 150 && amount <= 193
-            case .inch:
-                return amount >= 59 && amount <= 76
-            }
-        }
+private struct Height {
+    enum Unit: String {
+        case centimeters = "cm"
+        case inch = "in"
     }
 
+    let amount: Int
+    let unit: Unit
+
+    init?(_ string: String?) {
+        guard let string = string else { return nil }
+        guard let amount = Int(String(string.dropLast(2))) else { return nil }
+
+        if string.hasSuffix("cm") {
+            self.unit = .centimeters
+        } else if string.hasSuffix("in") {
+            self.unit = .inch
+        } else {
+            return nil
+        }
+
+        self.amount = amount
+    }
+
+    var isValid: Bool {
+        switch unit {
+        case .centimeters:
+            return amount >= 150 && amount <= 193
+        case .inch:
+            return amount >= 59 && amount <= 76
+        }
+    }
+}
+
+private struct Document {
     enum EyeColor: String {
         case amb
         case blu
