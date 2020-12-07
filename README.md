@@ -49,3 +49,7 @@ To run day 1:
 ### Day 6
 - Slightly over-engineered this answer because I expected to be getting the ASCII ordinals from the characters in part2, but that never came. Mapped the input to an array of arrays of sets of characters, this let me union all the sets and count the elements to get the answer.
 - Didn't require much work, just used the first set of the array as the final set (instead of an empty one) and then did intersections with the rest of the sets in the array.
+
+### Day 7
+- From experience I knew this was just a case of modelling this as dictionaries and using a recursive function to do a breadth first search of the graph. It took me a long time to work out how to actually make the function that's called recursively, but once it compiled it worked on the first try. [TDD](https://clean-swift.com/step-by-step-walkthrough-of-ios-test-driven-development-in-swift/) makes solving problems like this a joy.
+- I implemented this without reading the problem properly, but I ended up with a recursive loop because I made a silly mistake (always taking the root key rather than using the values I was finding as the new key), but it made me realise I wasn't adding the bags that contained other bags, just multiplying the number of bags by their contents recursively. I refactored and still has the problem, but the debugger showed my mistake.

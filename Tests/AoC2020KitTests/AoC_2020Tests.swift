@@ -180,8 +180,19 @@ dotted black bags contain no other bags.
         func testDay7Part1() {
             XCTAssertEqual(Day7(input: day7Input).part1(), 4)
         }
+    
+    let day7Part2Input = """
+shiny gold bags contain 2 dark red bags.
+dark red bags contain 2 dark orange bags.
+dark orange bags contain 2 dark yellow bags.
+dark yellow bags contain 2 dark green bags.
+dark green bags contain 2 dark blue bags.
+dark blue bags contain 2 dark violet bags.
+dark violet bags contain no other bags.
+"""
         
         func testDay7Part2() {
-            XCTAssertEqual(Day7(input: day7Input).part2(), 0)
+            XCTAssertEqual(Day7(input: day7Input).part2(), 32)
+            XCTAssertEqual(Day7(input: day7Part2Input).part2(), 126)
         }
 }

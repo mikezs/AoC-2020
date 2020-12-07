@@ -3,6 +3,7 @@ import Foundation
 public final class Day7: Day {
     typealias BagColor = String
     
+    private let search = "shiny gold"
     private let input: [BagColor: [BagColor: Int]]
     
     public init(input: String) {
@@ -22,13 +23,7 @@ public final class Day7: Day {
     }
 
     public func part1() -> Int {
-        let search = "shiny gold"
-        
-        return input.filter { bag($0.key, contains: search) }.count
-    }
-
-    public func part2() -> Int {
-        0
+        input.filter { bag($0.key, contains: search) }.count
     }
     
     private func bag(_ bag: BagColor, contains search: BagColor) -> Bool {
@@ -37,5 +32,17 @@ public final class Day7: Day {
         }
         
         return input[bag]?.contains { self.bag($0.key, contains: search) } == true
+    }
+
+    public func part2() -> Int {
+        colors(for: search)
+    }
+    
+    private func colors(for bag: BagColor) -> Int {
+        input[bag]!
+            .compactMap {
+                $1 + (self.colors(for: $0) * $1)
+            }
+            .reduce(0, +)
     }
 }
