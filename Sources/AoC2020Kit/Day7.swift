@@ -10,15 +10,10 @@ public final class Day7: Day {
         self.input = input.trimmedLines.reduce([BagColor: [BagColor: Int]](), { dict, rule in
             let parts = rule.components(separatedBy: " bags contain ")
             let matches = parts[1].matches(for: "([0-9]+) (.*?) bag")
-            var dict = dict
-            
-            dict[parts[0]] = matches.reduce([BagColor: Int]()) {
-                var dict = $0
-                dict[$1[1]] = Int($1[0])!
-                return dict
-            }
-            
-            return dict
+
+            return dict.adding(key: parts[0], value: matches.reduce([BagColor: Int]()) {
+                $0.adding(key: $1[1], value: Int($1[0]) ?? 0)
+            })
         })
     }
 
@@ -39,10 +34,10 @@ public final class Day7: Day {
     }
     
     private func colors(for bag: BagColor) -> Int {
-        input[bag]!
-            .compactMap {
-                $1 + (self.colors(for: $0) * $1)
+        input[bag]?
+            .map { subBag, count in
+                count + (self.colors(for: subBag) * count)
             }
-            .reduce(0, +)
+            .reduce(0, +) ?? -1
     }
 }

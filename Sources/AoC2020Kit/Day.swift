@@ -35,6 +35,14 @@ extension String {
     }
 }
 
+extension Dictionary {
+    func adding(key: Key, value: Value) -> [Key: Value] {
+        var copy = self
+        copy[key] = value
+        return copy
+    }
+}
+
 // https://stackoverflow.com/a/24144365
 extension StringProtocol {
     subscript(offset: Int) -> Character { self[index(startIndex, offsetBy: offset)] }
