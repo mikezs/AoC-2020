@@ -177,9 +177,9 @@ faded blue bags contain no other bags.
 dotted black bags contain no other bags.
 """
         
-        func testDay7Part1() {
-            XCTAssertEqual(Day7(input: day7Input).part1(), 4)
-        }
+    func testDay7Part1() {
+        XCTAssertEqual(Day7(input: day7Input).part1(), 4)
+    }
     
     let day7Part2Input = """
 shiny gold bags contain 2 dark red bags.
@@ -191,8 +191,19 @@ dark blue bags contain 2 dark violet bags.
 dark violet bags contain no other bags.
 """
         
-        func testDay7Part2() {
-            XCTAssertEqual(Day7(input: day7Input).part2(), 32)
-            XCTAssertEqual(Day7(input: day7Part2Input).part2(), 126)
-        }
+    func testDay7Part2() {
+        XCTAssertEqual(Day7(input: day7Input).part2(), 32)
+        XCTAssertEqual(Day7(input: day7Part2Input).part2(), 126)
+    }
+    
+    let day8Input = """
+"""
+        
+    func testDay8Part1() {
+        XCTAssertEqual(Day8(input: day8Input).part1(), 0)
+    }
+    
+    func testDay8Part2() {
+        XCTAssertEqual(Day8(input: day8Input).part2(), 0)
+    }
 }
