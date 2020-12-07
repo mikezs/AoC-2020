@@ -17,7 +17,7 @@ The idea is to use the example problems/solutions provided in the puzzles to do 
 
 To run day 1:
 - Create a file called day1.txt with your puzzle input
-- Then run `swift run 1`  in Terminal
+- Then run `swift run AoC-2020 1`  in Terminal
 
 ## Implementation notes
 
