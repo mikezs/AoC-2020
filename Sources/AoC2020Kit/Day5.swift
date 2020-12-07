@@ -13,7 +13,6 @@ public final class Day5: Day {
 
     public func part2() -> Int {
         let sortedInput = input.sorted()
-        print(sortedInput)
         var previous = sortedInput.first! - 1
         
         for number in input.sorted() {
