@@ -23,6 +23,10 @@ public struct Instruction {
 }
 
 public final class Day8: Day {
+    public enum Error: Swift.Error {
+        case infiniteLoop(accumulator: Int)
+    }
+
     private let input: [Instruction]
 
     public init(input: String) {
@@ -33,30 +37,14 @@ public final class Day8: Day {
     }
 
     public func part1() -> Int {
-        var input = self.input
-        var programCounter = 0
-        var accumulator = 0
-
-        while true {
-            var instruction = input[programCounter]
-            let currentIndex = programCounter
-
-            switch instruction.operation {
-            case .noOperation:
-                programCounter += 1
-            case .jump:
-                programCounter += instruction.value
-            case .accumulator:
-                accumulator += instruction.value
-                programCounter += 1
-            }
-
-            if input[programCounter].visited {
+        do {
+            return try run(program: input)
+        } catch {
+            if case let .infiniteLoop(accumulator) = error as? Error {
                 return accumulator
             }
 
-            instruction.visited = true
-            input[currentIndex] = instruction
+            return 0
         }
     }
 
@@ -72,7 +60,7 @@ public final class Day8: Day {
                 continue
             }
 
-            if let result = run(program: program) {
+            if let result = try? run(program: program) {
                 return result
             }
         }
@@ -80,7 +68,7 @@ public final class Day8: Day {
         return 0
     }
 
-    public func run(program: [Instruction]) -> Int? {
+    public func run(program: [Instruction]) throws -> Int {
         var program = program
         var programCounter = 0
         var accumulator = 0
@@ -102,7 +90,7 @@ public final class Day8: Day {
             if programCounter == program.count {
                 return accumulator
             } else if program[programCounter].visited {
-                return nil
+                throw Error.infiniteLoop(accumulator: accumulator)
             }
 
             instruction.visited = true
