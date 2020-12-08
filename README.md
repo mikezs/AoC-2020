@@ -54,3 +54,8 @@ To run day 1:
 - From experience I knew this was just a case of modelling this as dictionaries and using a recursive function to do a breadth first search of the graph. It took me a long time to work out how to actually make the function that's called recursively, but once it compiled it worked on the first try. [TDD](https://clean-swift.com/step-by-step-walkthrough-of-ios-test-driven-development-in-swift/) makes solving problems like this a joy.
 - I implemented this without reading the problem properly, but I ended up with a recursive loop because I made a silly mistake (always taking the root key rather than using the values I was finding as the new key), but it made me realise I wasn't adding the bags that contained other bags, just multiplying the number of bags by their contents recursively. I refactored and still has the problem, but the debugger showed my mistake.
 *Refactored to make the code slightly more readable and concise after comparing with other solutions. Also removed force-unwraps because I plan to validate with SwiftLint*
+
+### Day 8
+- Implementing an machine code language is always fun! I implemented the instruction interpreter and added a flag for if the instruction had already been visited. Relatively straightforward.
+- Next part meant a slightly different interpreter that failed in the event of a loop, rather than returning the current accumulator value. Then I looped over the whole program switching each operation like described and it worked first time.
+*This has been my favorite challenge so far!*
