@@ -239,11 +239,79 @@ acc +6
 576
 """
 
+    let day9InputPart1_1 = """
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+"""
+
+    let day9InputPart1_2 = """
+20
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+21
+22
+23
+24
+25
+45
+"""
+
     func testDay9Part1() {
+        XCTAssertEqual(Day9(input: day9InputPart1_1 + "\n26").part1(), -1)
+        XCTAssertEqual(Day9(input: day9InputPart1_1 + "\n49").part1(), -1)
+        XCTAssertEqual(Day9(input: day9InputPart1_1 + "\n100").part1(), 100)
+        XCTAssertEqual(Day9(input: day9InputPart1_1 + "\n50").part1(), 50)
+
+        XCTAssertEqual(Day9(input: day9InputPart1_2 + "\n26").part1(), -1)
+        XCTAssertEqual(Day9(input: day9InputPart1_2 + "\n65").part1(), 65)
+        XCTAssertEqual(Day9(input: day9InputPart1_2 + "\n64").part1(), -1)
+        XCTAssertEqual(Day9(input: day9InputPart1_2 + "\n66").part1(), -1)
+
         XCTAssertEqual(Day9(input: day9Input, preambleLength: 5).part1(), 127)
     }
 
     func testDay9Part2() {
+        XCTAssertEqual(Day9(input: day9InputPart1_2, preambleLength: 20).part2(), 0)
         XCTAssertEqual(Day9(input: day9Input, preambleLength: 5).part2(), 62)
     }
 }

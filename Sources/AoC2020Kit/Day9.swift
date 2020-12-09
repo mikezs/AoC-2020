@@ -13,15 +13,6 @@ public final class Day9: Day {
         self.preambleLength = preambleLength
     }
 
-    init(input: [Int], preambleLength: Int = 25) {
-        self.input = input
-        self.preambleLength = preambleLength
-    }
-
-    static func parse(string: String, preambleLength: Int) -> Day9 {
-        return Day9(input: string.trimmedLines.map { Int($0)! }, preambleLength: preambleLength)
-    }
-
     public func part1() -> Int {
         var position = preambleLength
 
