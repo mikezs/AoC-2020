@@ -2,6 +2,16 @@ import Foundation
 import AoC2020Kit
 
 final class AOC2020 {
+    let formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+
+        formatter.usesSignificantDigits = true
+        formatter.maximumSignificantDigits = 3
+        formatter.minimumSignificantDigits = 3
+
+        return formatter
+    }()
+
     init(args: [String] = CommandLine.arguments) {
         if args.count != 2 {
             let dateComponents = Calendar.current.dateComponents([.day, .month, .year], from: Date())
@@ -39,14 +49,18 @@ final class AOC2020 {
             fatalError("Day \(number) is not yet implemented")
         }
 
-        print("Day \(number) part 1")
         var date = Date()
-        print(day.part1())
-        print("(Took \(Date().timeIntervalSince(date)) seconds.)")
-        print("Day \(number) part 2")
+        let part1 = day.part1()
+        let part1Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
         date = Date()
-        print(day.part2())
-        print("(Took \(Date().timeIntervalSince(date)) seconds.)")
+        let part2 = day.part2()
+        let part2Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
+
+        print("Running Day \(number)")
+        print("Part 1: \(part1)")
+        print("Part 2: \(part2)")
+        print("Day \(number) Part 1 took \(part1Time) seconds")
+        print("Day \(number) Part 2 took \(part2Time) seconds")
     }
 
     func input(for day: Int) -> String? {
