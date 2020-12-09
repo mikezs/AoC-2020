@@ -59,3 +59,8 @@ To run day 1:
 - Implementing an machine code language is always fun! I implemented the instruction interpreter and added a flag for if the instruction had already been visited. Relatively straightforward.
 - Next part meant a slightly different interpreter that failed in the event of a loop, rather than returning the current accumulator value. Then I looped over the whole program switching each operation like described and it worked first time.
 *This has been my favorite challenge so far!*
+
+### Day 9
+- Not particularly happy with this part 1 implementation. I just did nested loops, slicing the array and making sure I didn't go out of bounds. Not an elegant solution, but works.
+- My solution to part 2 I'm really happy with and [Tim](https://github.com/timsearle/) mentioned it's an interview question he's seen recently. This was a breadth first search (doing slices of the whole array, for each size going up from 2) and it's really fast compared to the other players (but I'm not sure why) 
+*Note: I went back and added lots more test cases from the challenge.*
