@@ -56,11 +56,17 @@ final class AOC2020 {
         let part2 = day.part2()
         let part2Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
 
-        print("Running Day \(number)")
-        print("Part 1: \(part1)")
-        print("Part 2: \(part2)")
+        #if DEBUG
+        let target = "debug"
+        #else
+        let target = "release"
+        #endif
+
+        print("Running Day \(number) as \(target)")
         print("Day \(number) Part 1 took \(part1Time) seconds")
         print("Day \(number) Part 2 took \(part2Time) seconds")
+        print("Part 1: \(part1)")
+        print("Part 2: \(part2)")
     }
 
     func input(for day: Int) -> String? {
