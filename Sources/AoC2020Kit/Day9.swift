@@ -49,7 +49,7 @@ public final class Day9: Day {
     }
 
     public func part2() -> Int {
-        let find = 20874512
+        let find = part1()
         var currentSliceWidth = 2
 
         while currentSliceWidth < input.count {
