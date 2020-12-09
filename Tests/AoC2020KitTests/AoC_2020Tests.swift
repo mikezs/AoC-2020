@@ -217,13 +217,33 @@ acc +6
     }
 
     let day9Input = """
+35
+20
+15
+25
+47
+40
+62
+55
+65
+95
+102
+117
+150
+182
+127
+219
+299
+277
+309
+576
 """
 
     func testDay9Part1() {
-        XCTAssertEqual(Day9(input: day8Input).part1(), 0)
+        XCTAssertEqual(Day9(input: day9Input, preambleLength: 5).part1(), 127)
     }
 
     func testDay9Part2() {
-        XCTAssertEqual(Day9(input: day8Input).part2(), 0)
+        XCTAssertEqual(Day9(input: day9Input, preambleLength: 5).part2(), 62)
     }
 }
