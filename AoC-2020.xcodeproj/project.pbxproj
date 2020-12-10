@@ -92,6 +92,7 @@
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE048EEF2582180A004834E3 /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
+		BE048F03258218F9004834E3 /* day10.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day10.txt; sourceTree = "<group>"; };
 		BE589833257A4BB5005AE633 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		BE58983A257A7450005AE633 /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
 		BE58984B257A7644005AE633 /* day5.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day5.txt; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 				27685B08257CD33C00F02434 /* day7.txt */,
 				27685B0C257ECC1800F02434 /* day8.txt */,
 				27685B112580AEB800F02434 /* day9.txt */,
+				BE048F03258218F9004834E3 /* day10.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
