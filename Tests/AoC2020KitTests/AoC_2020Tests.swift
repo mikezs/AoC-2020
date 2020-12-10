@@ -371,7 +371,7 @@ acc +6
     }
 
     func testDay10Part2() {
-        XCTAssertEqual(Day10(input: day10Input1).part2(), 0)
-        XCTAssertEqual(Day10(input: day10Input2).part2(), 0)
+        XCTAssertEqual(Day10(input: day10Input1).part2(), 8)
+        XCTAssertEqual(Day10(input: day10Input2).part2(), 19208)
     }
 }

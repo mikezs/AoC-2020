@@ -8,6 +8,7 @@ public protocol Day {
 
 extension String {
     var trimmedLines: [String] { trimmingCharacters(in: .newlines).components(separatedBy: .newlines) }
+    var trimmedInts: [Int] { trimmedLines.compactMap { Int($0) } }
 }
 
 extension String {

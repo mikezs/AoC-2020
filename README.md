@@ -64,3 +64,7 @@ To run day 1:
 - Not particularly happy with this part 1 implementation. I just did nested loops, slicing the array and making sure I didn't go out of bounds. Not an elegant solution, but works.
 - My solution to part 2 I'm really happy with and [Tim](https://github.com/timsearle/) mentioned it's an interview question he's seen recently. This was a breadth first search (doing slices of the whole array, for each size going up from 2) and it's really fast compared to the other players (but I'm not sure why) 
 *Note: I went back and added lots more test cases from the challenge.*
+
+### Day 10
+- Relatively easy implementation, just count the number of times the number ahead of you in the sorted array is +3 or +1
+- This took me blooming ages. I made a (I think working) recursive solution, but after running it for 10 mins on my laptop it wasn't finished so obviously not write. Cracked out the old pen and paper and realised that there are sets of loops in a graph where the items are 1 apart (between 2 and 5 times in my input) seperated by gaps of 3 (see why we counted those in the first part? No gaps of 2!). This meant that we could just multiply the number of permutations in each group of 1-seperated numbers. We also need to check position 1 and 2 in the array since if either of these are 2 and 3 (starting at 1) we've got to add those too.
