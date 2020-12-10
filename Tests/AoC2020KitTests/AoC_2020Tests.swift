@@ -374,4 +374,15 @@ acc +6
         XCTAssertEqual(Day10(input: day10Input1).part2(), 8)
         XCTAssertEqual(Day10(input: day10Input2).part2(), 19208)
     }
+
+    let day11Input = """
+"""
+
+        func testDay11Part1() {
+            XCTAssertEqual(Day11(input: day11Input).part1(), 0)
+        }
+
+        func testDay11Part2() {
+            XCTAssertEqual(Day11(input: day11Input).part2(), 0)
+        }
 }

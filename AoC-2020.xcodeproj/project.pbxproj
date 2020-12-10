@@ -25,6 +25,7 @@
 		2723B0A3257C236D00F61E4E /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2723B0A2257C236D00F61E4E /* Day2.swift */; };
 		2725D7A02580F06D0079E7FA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		2725D7A22580F06D0079E7FA /* AoC2020Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */; };
+		2725D7A82582C9440079E7FA /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D7A72582C9440079E7FA /* Day11.swift */; };
 		27685B02257C295100F02434 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27685B01257C295100F02434 /* Day6.swift */; };
 		27685B06257CD2F900F02434 /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27685B05257CD2F900F02434 /* Day7.swift */; };
 		27685B0A257ECBC600F02434 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27685B09257ECBC600F02434 /* Day8.swift */; };
@@ -80,6 +81,7 @@
 		2723B0A1257C235500F61E4E /* day2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day2.txt; sourceTree = "<group>"; };
 		2723B0A2257C236D00F61E4E /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		2725D7A62580F06D0079E7FA /* AoC-2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2725D7A72582C9440079E7FA /* Day11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11.swift; sourceTree = "<group>"; };
 		27685B01257C295100F02434 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		27685B04257C29AF00F02434 /* day6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day6.txt; sourceTree = "<group>"; };
 		27685B05257CD2F900F02434 /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		27685B0C257ECC1800F02434 /* day8.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day8.txt; sourceTree = "<group>"; };
 		27685B0E2580AE7600F02434 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
 		27685B112580AEB800F02434 /* day9.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day9.txt; sourceTree = "<group>"; };
+		27AA5E962582C9D6007B17FB /* day11.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day11.txt; sourceTree = "<group>"; };
 		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +159,7 @@
 				27685B0C257ECC1800F02434 /* day8.txt */,
 				27685B112580AEB800F02434 /* day9.txt */,
 				BE048F03258218F9004834E3 /* day10.txt */,
+				27AA5E962582C9D6007B17FB /* day11.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -174,6 +178,7 @@
 				27685B09257ECBC600F02434 /* Day8.swift */,
 				27685B0E2580AE7600F02434 /* Day9.swift */,
 				BE048EEF2582180A004834E3 /* Day10.swift */,
+				2725D7A72582C9440079E7FA /* Day11.swift */,
 			);
 			name = AoC2020Kit;
 			path = Sources/AoC2020Kit;
@@ -392,6 +397,7 @@
 				2723B0A0257C1D5500F61E4E /* Day1.swift in Sources */,
 				OBJ_47 /* Day3.swift in Sources */,
 				2723B0A3257C236D00F61E4E /* Day2.swift in Sources */,
+				2725D7A82582C9440079E7FA /* Day11.swift in Sources */,
 				BE58983B257A7450005AE633 /* Day5.swift in Sources */,
 				BE048EF02582180A004834E3 /* Day10.swift in Sources */,
 			);
