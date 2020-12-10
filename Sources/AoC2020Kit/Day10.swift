@@ -19,7 +19,7 @@ public final class Day10: Day {
 
         for (index, adapter) in input.enumerated() where index < input.count - 1 {
             let difference = input[index+1] - adapter
-            differences[difference]! += 1
+            differences[difference]? += 1
         }
 
         return differences
@@ -46,24 +46,4 @@ public final class Day10: Day {
 
         return permutations
     }
-
-    /*
-    // Recursive attempt. Works, but will take a looooong time
-    public func recursivePermutations(from index: Int) -> Int {
-        var permutations = 0
-        let currentValue = input[index]
-
-        for step in 1...3 where index + step < input.count && input[index+step] - currentValue <= 3 {
-            let subPermutations = self.recursivePermutations(from: index + step)
-
-            if subPermutations == 0 {
-                permutations += 1
-            } else {
-                permutations += subPermutations
-            }
-        }
-
-        return permutations
-    }
-    */
 }
