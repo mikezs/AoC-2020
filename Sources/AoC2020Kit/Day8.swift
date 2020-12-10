@@ -25,12 +25,14 @@ public struct Instruction {
 public final class Day8: Day {
     public enum Error: Swift.Error {
         case infiniteLoop(accumulator: Int)
+        case emptyProgram
     }
 
     private let input: [Instruction]
 
     public init(input: String) {
-        self.input = input.trimmedLines.map {
+        self.input = input.trimmedLines.compactMap {
+            guard !$0.isEmpty else { return nil }
             let parts = $0.matches(for: "([a-z]{3}) \\+?(-?[0-9]+)")[0]
             return Instruction(operation: parts[0], value: parts[1])
         }
@@ -69,6 +71,8 @@ public final class Day8: Day {
     }
 
     public func run(program: [Instruction]) throws -> Int {
+        guard !program.isEmpty else { throw Error.emptyProgram }
+
         var program = program
         var programCounter = 0
         var accumulator = 0

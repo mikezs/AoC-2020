@@ -8,11 +8,12 @@ public final class Day5: Day {
     }
 
     public func part1() -> Int {
-        input.reduce(0, { max($0, $1) })
+        input.reduce(0, max)
     }
 
     public func part2() -> Int {
         let sortedInput = input.sorted()
+        print(sortedInput)
         var previous = sortedInput.first! - 1
 
         for number in input.sorted() {
@@ -42,8 +43,6 @@ public final class Day5: Day {
                 print("Invalid front/back instruction \(char)")
                 return -1
             }
-
-            print("\(char) keeps rows \(xLower) through \(xUpper)")
         }
 
         assert(xLower == xUpper)
