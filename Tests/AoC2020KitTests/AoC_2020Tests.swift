@@ -376,13 +376,23 @@ acc +6
     }
 
     let day11Input = """
+L.LL.LL.LL
+LLLLLLL.LL
+L.L.L..L..
+LLLL.LL.LL
+L.LL.LL.LL
+L.LLLLL.LL
+..L.L.....
+LLLLLLLLLL
+L.LLLLLL.L
+L.LLLLL.LL
 """
 
         func testDay11Part1() {
-            XCTAssertEqual(Day11(input: day11Input).part1(), 0)
+            XCTAssertEqual(Day11(input: day11Input).part1(), 37)
         }
 
         func testDay11Part2() {
-            XCTAssertEqual(Day11(input: day11Input).part2(), 0)
+            XCTAssertEqual(Day11(input: day11Input).part2(), 26)
         }
 }

@@ -51,13 +51,6 @@ final class AOC2020 {
             fatalError("Day \(number) is not yet implemented")
         }
 
-        var date = Date()
-        let part1 = day.part1()
-        let part1Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
-        date = Date()
-        let part2 = day.part2()
-        let part2Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
-
         #if DEBUG
         let target = "debug"
         #else
@@ -65,8 +58,19 @@ final class AOC2020 {
         #endif
 
         print("Running Day \(number) as \(target)")
+
+        var date = Date()
+        let part1 = day.part1()
+        let part1Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
+
         print("Day \(number) Part 1 took \(part1Time) seconds")
+
+        date = Date()
+        let part2 = day.part2()
+        let part2Time = formatter.string(from: NSNumber(value: Date().timeIntervalSince(date))) ?? "N/A"
+
         print("Day \(number) Part 2 took \(part2Time) seconds")
+
         print("Part 1: \(part1)")
         print("Part 2: \(part2)")
     }
