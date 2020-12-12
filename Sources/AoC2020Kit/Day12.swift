@@ -1,10 +1,24 @@
 import Foundation
 
 public final class Day12: Day {
-    private let input: [(String, Int)]
+    enum Instruction: String {
+        case left = "L"
+        case right = "R"
+        case north = "N"
+        case east = "E"
+        case south = "S"
+        case west = "W"
+        case forward = "F"
+        case unknown
+    }
+
+    private let input: [(Instruction, Int)]
 
     public init(input: String) {
-        self.input = input.trimmedLines.map { (String($0.prefix(1)), Int(String($0.suffix($0.count - 1)))!) }
+        self.input = input.trimmedLines.map {
+            (Instruction(rawValue: String($0.prefix(1))) ?? .unknown,
+             Int(String($0.suffix($0.count - 1)))!)
+        }
     }
 
     public func part1() -> Int {
@@ -14,18 +28,18 @@ public final class Day12: Day {
 
         for (instruction, value) in input {
             switch instruction {
-            case "L": angle = (angle + (360 - value)) % 360
-            case "R": angle = (angle + value) % 360
-            case "N": y -= value
-            case "E": x += value
-            case "S": y += value
-            case "W": x -= value
-            case "F":
+            case .left:     angle = (angle + (360 - value)) % 360
+            case .right:    angle = (angle + value) % 360
+            case .north:    y -= value
+            case .east:     x += value
+            case .south:    y += value
+            case .west:     x -= value
+            case .forward:
                 if angle == 0 { x += value }
                 if angle == 90 { y += value }
                 if angle == 180 { x -= value }
                 if angle == 270 { y -= value }
-            default: return -1
+            case .unknown: return -1
             }
         }
 
@@ -40,14 +54,14 @@ public final class Day12: Day {
 
         for (instruction, value) in input {
             switch instruction {
-            case "F":
+            case .forward:
                 shipE += value * waypointE
                 shipN += value * waypointN
-            case "N": waypointN += value
-            case "E": waypointE += value
-            case "S": waypointN -= value
-            case "W": waypointE -= value
-            case "L":
+            case .north: waypointN += value
+            case .east: waypointE += value
+            case .south: waypointN -= value
+            case .west: waypointE -= value
+            case .left:
                 switch value {
                 case 90:
                     let oldE = waypointE
@@ -62,7 +76,7 @@ public final class Day12: Day {
                     waypointN = -oldE
                 default: return -1
                 }
-            case "R":
+            case .right:
                 switch value {
                 case 90:
                     let oldE = waypointE
@@ -77,7 +91,7 @@ public final class Day12: Day {
                     waypointN = oldE
                 default: return -1
                 }
-            default: return -1
+            case .unknown: return -1
             }
         }
 

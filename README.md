@@ -78,3 +78,4 @@ To run day 1:
 ### Day 12 - [Logo](https://en.wikipedia.org/wiki/Logo_(programming_language))
 - Implementing the glassic Logo game. I remember playing this as a kid at school moving a turtle around the screen and drawing a line. I had a bug where rotate left and rotate right were implemented the same, just in a different way, so there's a test specifically for that logic.
 - Improving on the last solution with vector maths instead of orthagonal. [GCSE](https://en.wikipedia.org/wiki/General_Certificate_of_Secondary_Education) maths taught me this question is basically always asked about ships because they can move in any direction.
+*Instead of comparing strings each loop, I converted the Logo instructions into an enum and pre-processed and it was about 1,000 times faster* 
