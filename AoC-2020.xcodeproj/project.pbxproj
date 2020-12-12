@@ -30,6 +30,7 @@
 		27685B06257CD2F900F02434 /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27685B05257CD2F900F02434 /* Day7.swift */; };
 		27685B0A257ECBC600F02434 /* Day8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27685B09257ECBC600F02434 /* Day8.swift */; };
 		27685B0F2580AE7700F02434 /* Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27685B0E2580AE7600F02434 /* Day9.swift */; };
+		27AA5E982584DECB007B17FB /* Day12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AA5E972584DECB007B17FB /* Day12.swift */; };
 		BE048EF02582180A004834E3 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE048EEF2582180A004834E3 /* Day10.swift */; };
 		BE589834257A4BB5005AE633 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE589833257A4BB5005AE633 /* ExtensionTests.swift */; };
 		BE58983B257A7450005AE633 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58983A257A7450005AE633 /* Day5.swift */; };
@@ -91,6 +92,8 @@
 		27685B0E2580AE7600F02434 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
 		27685B112580AEB800F02434 /* day9.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day9.txt; sourceTree = "<group>"; };
 		27AA5E962582C9D6007B17FB /* day11.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day11.txt; sourceTree = "<group>"; };
+		27AA5E972584DECB007B17FB /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
+		27AA5E9A2584DF0B007B17FB /* day12.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day12.txt; sourceTree = "<group>"; };
 		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +163,7 @@
 				27685B112580AEB800F02434 /* day9.txt */,
 				BE048F03258218F9004834E3 /* day10.txt */,
 				27AA5E962582C9D6007B17FB /* day11.txt */,
+				27AA5E9A2584DF0B007B17FB /* day12.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 				27685B0E2580AE7600F02434 /* Day9.swift */,
 				BE048EEF2582180A004834E3 /* Day10.swift */,
 				2725D7A72582C9440079E7FA /* Day11.swift */,
+				27AA5E972584DECB007B17FB /* Day12.swift */,
 			);
 			name = AoC2020Kit;
 			path = Sources/AoC2020Kit;
@@ -388,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				27AA5E982584DECB007B17FB /* Day12.swift in Sources */,
 				BE6177F925792EB200016CA3 /* Day.swift in Sources */,
 				27685B0A257ECBC600F02434 /* Day8.swift in Sources */,
 				27685B06257CD2F900F02434 /* Day7.swift in Sources */,
