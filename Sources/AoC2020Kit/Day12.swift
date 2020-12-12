@@ -12,20 +12,20 @@ public final class Day12: Day {
         var x = 0
         var y = 0
 
-        input.forEach {
-            switch $0.0 {
-            case "L": angle = (angle + (360 - $0.1)) % 360
-            case "R": angle = (angle + $0.1) % 360
-            case "N": y -= $0.1
-            case "E": x += $0.1
-            case "S": y += $0.1
-            case "W": x -= $0.1
+        for (instruction, value) in input {
+            switch instruction {
+            case "L": angle = (angle + (360 - value)) % 360
+            case "R": angle = (angle + value) % 360
+            case "N": y -= value
+            case "E": x += value
+            case "S": y += value
+            case "W": x -= value
             case "F":
-                if angle == 0 { x += $0.1 }
-                if angle == 90 { y += $0.1 }
-                if angle == 180 { x -= $0.1 }
-                if angle == 270 { y -= $0.1 }
-            default: return
+                if angle == 0 { x += value }
+                if angle == 90 { y += value }
+                if angle == 180 { x -= value }
+                if angle == 270 { y -= value }
+            default: return -1
             }
         }
 
@@ -38,17 +38,17 @@ public final class Day12: Day {
         var shipE = 0
         var shipN = 0
 
-        input.forEach {
-            switch $0.0 {
+        for (instruction, value) in input {
+            switch instruction {
             case "F":
-                shipE += $0.1 * waypointE
-                shipN += $0.1 * waypointN
-            case "N": waypointN += $0.1
-            case "E": waypointE += $0.1
-            case "S": waypointN -= $0.1
-            case "W": waypointE -= $0.1
+                shipE += value * waypointE
+                shipN += value * waypointN
+            case "N": waypointN += value
+            case "E": waypointE += value
+            case "S": waypointN -= value
+            case "W": waypointE -= value
             case "L":
-                switch $0.1 {
+                switch value {
                 case 90:
                     let oldE = waypointE
                     waypointE = -waypointN
@@ -60,10 +60,10 @@ public final class Day12: Day {
                     let oldE = waypointE
                     waypointE = waypointN
                     waypointN = -oldE
-                default: assertionFailure()
+                default: return -1
                 }
             case "R":
-                switch $0.1 {
+                switch value {
                 case 90:
                     let oldE = waypointE
                     waypointE = waypointN
@@ -75,9 +75,9 @@ public final class Day12: Day {
                     let oldE = waypointE
                     waypointE = -waypointN
                     waypointN = oldE
-                default: assertionFailure()
+                default: return -1
                 }
-            default: assertionFailure()
+            default: return -1
             }
         }
 

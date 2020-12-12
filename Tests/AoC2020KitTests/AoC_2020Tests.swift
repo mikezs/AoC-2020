@@ -410,13 +410,38 @@ L90
 F5
 """
 
+    let day12Part1Input3 = """
+E1
+W1
+L180
+F1
+"""
+
+    let day12Part2Input2 = """
+E1
+W1
+S1
+L90
+L180
+L270
+R90
+R180
+R270
+"""
+
     func testDay12Part1() {
         XCTAssertEqual(Day12(input: day12Input).part1(), 25)
         XCTAssertEqual(Day12(input: day12Part1Input2).part1(), 0)
+        XCTAssertEqual(Day12(input: day12Part1Input3).part1(), 1)
+        XCTAssertEqual(Day12(input: "A1").part1(), -1)
     }
 
     func testDay12Part2() {
         XCTAssertEqual(Day12(input: day12Input).part2(), 286)
+        XCTAssertEqual(Day12(input: day12Part2Input2).part2(), 0)
+        XCTAssertEqual(Day12(input: "L1").part2(), -1)
+        XCTAssertEqual(Day12(input: "R1").part2(), -1)
+        XCTAssertEqual(Day12(input: "A1").part2(), -1)
     }
 
     let day13Input = """
