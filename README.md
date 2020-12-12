@@ -74,3 +74,7 @@ To run day 1:
 - Classic conways game of life, but without the iteration lifespan. I guessed part 2 would involve implementing this so I took a chance and implemented a data structure to represent a seat. Running unoptimised (debug) was 100 times slower than release.
 - This was the same as the first question, but increasing the distance you searched in each direction until you found a seat (not a lifespan, drat). I ran this solution for a minute unoptimised, then switched to optimised (release) and it still took over 10 seconds to run! This may have taken hours to run on debug or in a playground.
 *I'm planning to go back and write a better solution to the "found in direction" mechanism and I can remove my `Seat` object and just use a 2-dimentional array of optional `Bool`s*
+
+### Day 12 - [Logo](https://en.wikipedia.org/wiki/Logo_(programming_language))
+- Implementing the glassic Logo game. I remember playing this as a kid at school moving a turtle around the screen and drawing a line. I had a bug where rotate left and rotate right were implemented the same, just in a different way, so there's a test specifically for that logic.
+- Improving on the last solution with vector maths instead of orthagonal. [GCSE](https://en.wikipedia.org/wiki/General_Certificate_of_Secondary_Education) maths taught me this question is basically always asked about ships because they can move in any direction.

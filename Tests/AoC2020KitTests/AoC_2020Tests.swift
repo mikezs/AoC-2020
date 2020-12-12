@@ -396,14 +396,26 @@ L.LLLLL.LL
         XCTAssertEqual(Day11(input: day11Input).part2(), 26)
     }
 
-        let day12Input = """
+    let day12Input = """
+F10
+N3
+F7
+R90
+F11
+"""
+
+    let day12Part1Input2 = """
+S5
+L90
+F5
 """
 
     func testDay12Part1() {
-        XCTAssertEqual(Day12(input: day12Input).part1(), 0)
+        XCTAssertEqual(Day12(input: day12Input).part1(), 25)
+        XCTAssertEqual(Day12(input: day12Part1Input2).part1(), 0)
     }
 
     func testDay12Part2() {
-        XCTAssertEqual(Day12(input: day12Input).part2(), 0)
+        XCTAssertEqual(Day12(input: day12Input).part2(), 286)
     }
 }
