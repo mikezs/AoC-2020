@@ -97,7 +97,7 @@
 		27AA5E962582C9D6007B17FB /* day11.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day11.txt; sourceTree = "<group>"; };
 		27AA5E972584DECB007B17FB /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
 		27AA5E9A2584DF0B007B17FB /* day12.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day12.txt; sourceTree = "<group>"; };
-		"AoC-2020::AoC-2020::Product" /* AoC-2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "AoC-2020"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"AoC-2020::AoC-2020::Product" /* AoC-2020-debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "AoC-2020-debug"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE048EEF2582180A004834E3 /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 			children = (
 				"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */,
 				"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */,
-				"AoC-2020::AoC-2020::Product" /* AoC-2020 */,
+				"AoC-2020::AoC-2020::Product" /* AoC-2020-debug */,
 				2725D7A62580F06D0079E7FA /* AoC-2020 */,
 			);
 			name = Products;
@@ -288,7 +288,7 @@
 			);
 			name = "AoC-2020";
 			productName = AoC_2020;
-			productReference = "AoC-2020::AoC-2020::Product" /* AoC-2020 */;
+			productReference = "AoC-2020::AoC-2020::Product" /* AoC-2020-debug */;
 			productType = "com.apple.product-type.tool";
 		};
 		"AoC-2020::AoC2020Kit" /* AoC2020Kit */ = {
@@ -521,6 +521,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)-debug";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
@@ -547,6 +548,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)-debug";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
