@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AoC-2020::AoC-2020"
-            BuildableName = "AoC-2020"
+            BuildableName = "AoC-2020-debug"
             BlueprintName = "AoC-2020"
             ReferencedContainer = "container:AoC-2020.xcodeproj">
          </BuildableReference>
@@ -79,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AoC-2020::AoC-2020"
+            BuildableName = "AoC-2020"
+            BlueprintName = "AoC-2020"
+            ReferencedContainer = "container:AoC-2020.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
