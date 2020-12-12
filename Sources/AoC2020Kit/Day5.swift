@@ -13,10 +13,9 @@ public final class Day5: Day {
 
     public func part2() -> Int {
         let sortedInput = input.sorted()
-        print(sortedInput)
         var previous = sortedInput.first! - 1
 
-        for number in input.sorted() {
+        for number in sortedInput {
             if number != previous + 1 {
                 return previous + 1
             }
@@ -24,7 +23,7 @@ public final class Day5: Day {
             previous = number
         }
 
-        return 0
+        return -1
     }
 
     public static func seatID(instructions: String) -> Int {
