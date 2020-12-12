@@ -14,6 +14,7 @@ public final class Day10: Day {
     }
 
     public func differences() -> [Int: Int] {
+        guard !input.isEmpty else { return [:] }
         // Initialise one at the start (0 jolts) and one at the end (always +3)
         var differences = [1: 1, 2: 0, 3: 1]
 

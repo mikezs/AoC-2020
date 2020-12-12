@@ -383,6 +383,7 @@ acc +6
     func testDay10Part1() {
         XCTAssertEqual(Day10(input: day10Input1).part1(), 7*5)
         XCTAssertEqual(Day10(input: day10Input2).part1(), 22*10)
+        XCTAssertEqual(Day10(input: "").part1(), 0)
     }
 
     func testDay10Part2() {
@@ -409,6 +410,10 @@ L.LLLLL.LL
 
     func testDay11Part2() {
         XCTAssertEqual(Day11(input: day11Input).part2(), 26)
+    }
+
+    func testDay11PrintableSeats() {
+        XCTAssertEqual(Day11.printableSeats([[Seat(occupied: true), Seat(occupied: false), nil]]), ["#L."])
     }
 
     let day12Input = """

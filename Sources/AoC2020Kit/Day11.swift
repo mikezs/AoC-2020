@@ -1,7 +1,11 @@
 import Foundation
 
 public struct Seat: Equatable {
-    let occupied: Bool
+    public let occupied: Bool
+
+    public init(occupied: Bool) {
+        self.occupied = occupied
+    }
 }
 
 public func ==(lhs: Seat, rhs: Seat) -> Bool {
@@ -30,7 +34,7 @@ public final class Day11: Day {
     public func part1() -> Int {
         var lastIteration = input
 
-        //printSeats(lastIteration)
+        //Self.printableSeats(lastIteration).forEach { print($0) }
 
         while true {
             let nextIteration = iterate(seats: lastIteration)
@@ -41,12 +45,12 @@ public final class Day11: Day {
 
             lastIteration = nextIteration
 
-            //printSeats(lastIteration)
+            //Self.printableSeats(lastIteration).forEach { print($0) }
         }
     }
 
-    public func printSeats(_ seats: [[Seat?]]) {
-        seats.forEach { print($0.reduce("", { $0 + ($1?.occupied == true ? "#" : $1?.occupied == false ? "L" : ".") })) }
+    public static func printableSeats(_ seats: [[Seat?]]) -> [String] {
+        seats.map { $0.reduce("", { $0 + ($1?.occupied == true ? "#" : $1?.occupied == false ? "L" : ".") }) }
     }
 
     public func iterate(seats: [[Seat?]]) -> [[Seat?]] {
@@ -84,7 +88,7 @@ public final class Day11: Day {
     public func part2() -> Int {
         var lastIteration = input
 
-        //printSeats(lastIteration)
+        //Self.printableSeats(lastIteration).forEach { print($0) }
 
         while true {
             let nextIteration = self.iterateSight(seats: lastIteration)
@@ -95,7 +99,7 @@ public final class Day11: Day {
 
             lastIteration = nextIteration
 
-            //printSeats(lastIteration)
+            //Self.printableSeats(lastIteration).forEach { print($0) }
         }
     }
 
