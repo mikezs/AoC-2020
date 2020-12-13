@@ -79,3 +79,8 @@ To run day 1:
 - Implementing the glassic Logo game. I remember playing this as a kid at school moving a turtle around the screen and drawing a line. I had a bug where rotate left and rotate right were implemented the same, just in a different way, so there's a test specifically for that logic.
 - Improving on the last solution with vector maths instead of orthagonal. [GCSE](https://en.wikipedia.org/wiki/General_Certificate_of_Secondary_Education) maths taught me this question is basically always asked about ships because they can move in any direction.
 *Instead of comparing strings each loop, I converted the Logo instructions into an enum and pre-processed and it was about 1,000 times faster* 
+
+### Day 13 - Factorization
+- First part was a "simple" loop to find the answer, ran pretty quickly.
+- Second part however took **3 and a half hours** using an optimised build to find the answer. Basically you've been given the factors of a really large number and you've got to find the number (reverse encryption?). I picked the largest bus number as my number to loop by, but I expect it's probably way more efficient to find a number where all of the busses (at their offset) are the common denominators and loop with that.
+*This problem is obviously designed so you're not meant to be able to do the unoptimised search like I did. Luckily I anticipated this and made an optimised build and ran it for hours on a fast computer. I will try to find a better number to loop with.*

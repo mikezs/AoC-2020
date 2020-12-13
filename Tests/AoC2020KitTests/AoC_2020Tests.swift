@@ -465,13 +465,20 @@ R270
     }
 
     let day13Input = """
+939
+7,13,x,x,59,x,31,19
 """
 
     func testDay13Part1() {
-        XCTAssertEqual(Day13(input: day13Input).part1(), 0)
+        XCTAssertEqual(Day13(input: day13Input).part1(), 295)
     }
 
     func testDay13Part2() {
-        XCTAssertEqual(Day13(input: day13Input).part2(), 0)
+        XCTAssertEqual(Day13(input: day13Input).part2(), 1068781)
+        XCTAssertEqual(Day13(input: "17,x,13,19").part2(), 3417)
+        XCTAssertEqual(Day13(input: "67,7,59,61").part2(), 754018)
+        XCTAssertEqual(Day13(input: "67,x,7,59,61").part2(), 779210)
+        XCTAssertEqual(Day13(input: "67,7,x,59,61").part2(), 1261476)
+        XCTAssertEqual(Day13(input: "1789,37,47,1889").part2(), 1202161486)
     }
 }
