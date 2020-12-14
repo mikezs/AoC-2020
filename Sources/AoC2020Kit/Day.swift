@@ -19,7 +19,6 @@ extension String {
 
         var stringMatches = [[String]]()
 
-
         matches?.forEach { match in
             var subMatches = [String]()
 

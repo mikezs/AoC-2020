@@ -37,6 +37,7 @@
 		BE58983B257A7450005AE633 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58983A257A7450005AE633 /* Day5.swift */; };
 		BE6177F925792EB200016CA3 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6177F825792EB200016CA3 /* Day.swift */; };
 		BE617805257932B400016CA3 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE617804257932B400016CA3 /* Day4.swift */; };
+		BE6E19B52587602C003A0B22 /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6E19B42587602C003A0B22 /* Day14.swift */; };
 		OBJ_26 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_28 /* AoC2020Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */; };
 		OBJ_36 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -109,6 +110,8 @@
 		BE6177F825792EB200016CA3 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		BE617804257932B400016CA3 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		BE6178152579336F00016CA3 /* day4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day4.txt; sourceTree = "<group>"; };
+		BE6E19B42587602C003A0B22 /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
+		BE6E19C22587603E003A0B22 /* day14.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day14.txt; sourceTree = "<group>"; };
 		OBJ_11 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		OBJ_14 /* AoC_2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AoC_2020Tests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -168,6 +171,7 @@
 				27AA5E962582C9D6007B17FB /* day11.txt */,
 				27AA5E9A2584DF0B007B17FB /* day12.txt */,
 				27A47F5B258519170088A586 /* day13.txt */,
+				BE6E19C22587603E003A0B22 /* day14.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 				2725D7A72582C9440079E7FA /* Day11.swift */,
 				27AA5E972584DECB007B17FB /* Day12.swift */,
 				27A47F59258518F80088A586 /* Day13.swift */,
+				BE6E19B42587602C003A0B22 /* Day14.swift */,
 			);
 			name = AoC2020Kit;
 			path = Sources/AoC2020Kit;
@@ -408,6 +413,7 @@
 				27685B02257C295100F02434 /* Day6.swift in Sources */,
 				2723B0A0257C1D5500F61E4E /* Day1.swift in Sources */,
 				OBJ_47 /* Day3.swift in Sources */,
+				BE6E19B52587602C003A0B22 /* Day14.swift in Sources */,
 				2723B0A3257C236D00F61E4E /* Day2.swift in Sources */,
 				2725D7A82582C9440079E7FA /* Day11.swift in Sources */,
 				BE58983B257A7450005AE633 /* Day5.swift in Sources */,

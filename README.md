@@ -84,3 +84,8 @@ To run day 1:
 - First part was a "simple" loop to find the answer, ran pretty quickly.
 - Second part however took **3 and a half hours** using an optimised build to find the answer. Basically you've been given the factors of a really large number and you've got to find the number (reverse encryption?). I picked the largest bus number as my number to loop by, but I expect it's probably way more efficient to find a number where all of the busses (at their offset) are the common denominators and loop with that.
 *This problem is obviously designed so you're not meant to be able to do the unoptimised search like I did. Luckily I anticipated this and made an optimised build and ran it for hours on a fast computer. I will try to find a better number to loop with.*
+
+### Day 14 - The 3 Bitwise Men
+- After reading the question, it was obvious that we needed to bitshift, so I went about converting a string to binary (thanks stackoverflow) but I used a regex helper extension to string I made, which I used incorrectly, so that cost me lots of time. After I'd got it working, the only other complexity was forcing a bit to be zero. I kept track of bits to be 1 and bits to be 0, and applied them seperately.
+- Next part required looping through all possible combinations for certain bits, so these were generated as a power of 2 for the number of bits, then each bit was shifted to the position the bit was meant to be in. I still needed to keep track of the bits that should be 0 and should be 1, apply these and output all the memory locations as an array.
+*This has to be run on a 64-bit system to not overflow the 36-bit numbers. Some languages would have lots of additional complexity to implement this.*

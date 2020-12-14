@@ -481,4 +481,33 @@ R270
         XCTAssertEqual(Day13(input: "67,7,x,59,61").part2(), 1261476)
         XCTAssertEqual(Day13(input: "1789,37,47,1889").part2(), 1202161486)
     }
+
+    func testDay14Bitmask() {
+        let mask = Day14.Mask("XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X")
+        let value = Day14.Write(location: 8, value: 11)
+        XCTAssertEqual(value.apply(mask: mask), 73)
+    }
+
+    let day14Part1Input = """
+mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
+mem[8] = 11
+mem[7] = 101
+mem[8] = 0
+"""
+
+    func testDay14Part1() {
+        XCTAssertEqual(Day14(input: "").part1(), 0)
+        XCTAssertEqual(Day14(input: day14Part1Input).part1(), 165)
+    }
+
+    let day14Part2Input = """
+mask = 000000000000000000000000000000X1001X
+mem[42] = 100
+mask = 00000000000000000000000000000000X0XX
+mem[26] = 1
+"""
+
+    func testDay14Part2() {
+        XCTAssertEqual(Day14(input: day14Part2Input).part2(), 208)
+    }
 }
