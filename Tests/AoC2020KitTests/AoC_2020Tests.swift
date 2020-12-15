@@ -510,4 +510,15 @@ mem[26] = 1
     func testDay14Part2() {
         XCTAssertEqual(Day14(input: day14Part2Input).part2(), 208)
     }
+
+    let day15Input = """
+"""
+
+    func testDay15Part1() {
+        XCTAssertEqual(Day15(input: day15Input).part1(), 0)
+    }
+
+    func testDay15Part2() {
+        XCTAssertEqual(Day15(input: day15Input).part2(), 0)
+    }
 }
