@@ -8,11 +8,22 @@ public struct Seat: Equatable {
     }
 }
 
-public func ==(lhs: Seat, rhs: Seat) -> Bool {
+public func == (lhs: Seat, rhs: Seat) -> Bool {
     return lhs.occupied == rhs.occupied
 }
 
 public final class Day11: Day {
+    private enum Direction {
+        case north
+        case northEast
+        case east
+        case southEast
+        case south
+        case southWest
+        case west
+        case northWest
+    }
+
     private let input: [[Seat?]]
 
     public init(input: String) {
@@ -103,41 +114,45 @@ public final class Day11: Day {
         }
     }
 
+    private func direction(_ j: Int, _ i: Int) -> Direction? {
+        switch (j, i) {
+        case (-1,-1): return .northWest
+        case (-1,0): return .west
+        case (-1,1): return .southWest
+        case (0,-1): return .north
+        case (0,1): return .south
+        case (1,-1): return .northEast
+        case (1,0): return .east
+        case (1,1): return .southEast
+        default: return nil
+        }
+    }
+
     public func iterateSight(seats: [[Seat?]]) -> [[Seat?]] {
         var iteration = seats
 
         for (y, row) in seats.enumerated() {
             for (x, seat) in row.enumerated() where seat != nil {
                 var occupiedSeats = 0
-                var foundAt = [
-                    "N": false,
-                    "NE": false,
-                    "E": false,
-                    "SE": false,
-                    "S": false,
-                    "SW": false,
-                    "W": false,
-                    "NW": false,
+                var foundAt: [Direction: Bool] = [
+                    .north: false,
+                    .northEast: false,
+                    .east: false,
+                    .southEast: false,
+                    .south: false,
+                    .southWest: false,
+                    .west: false,
+                    .northWest: false,
                 ]
 
                 for d in 1...seats.count {
                     for i in -1...1 where (y + i * d >= 0) && (y + i * d < seats.count) {
                         for j in -1...1 where !(i == 0 && j == 0) && (x + j * d >= 0) && (x + j * d < row.count) {
-                            let direction: String
-
-                            switch (j, i) {
-                            case (-1,-1): direction = "NW"
-                            case (-1,0): direction = "W"
-                            case (-1,1): direction = "SW"
-                            case (0,-1): direction = "N"
-                            case (0,1): direction = "S"
-                            case (1,-1): direction = "NE"
-                            case (1,0): direction = "E"
-                            case (1,1): direction = "SE"
-                            default: continue
+                            guard let direction = direction(j, i) else {
+                                continue
                             }
 
-                            if foundAt[direction] == true {
+                            if let found = foundAt[direction], found {
                                 continue
                             }
 

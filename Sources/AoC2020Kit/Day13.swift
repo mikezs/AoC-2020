@@ -33,9 +33,9 @@ public final class Day13: Day {
     }
 
     public func part2() -> Int {
-        let max = busses.sorted().last!
-        let maxIndex = busses.firstIndex(of: max)!
-        var currentOffset = max % 1_000_000_000_000
+        let stride = busses.sorted().last!
+        let maxIndex = busses.firstIndex(of: stride)!
+        var currentOffset = stride
 
         while true {
             let t = currentOffset - maxIndex
@@ -50,7 +50,7 @@ public final class Day13: Day {
                 }
             }
 
-            currentOffset += max
+            currentOffset += stride
         }
     }
 }

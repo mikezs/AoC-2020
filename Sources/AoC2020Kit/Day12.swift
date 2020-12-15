@@ -35,10 +35,15 @@ public final class Day12: Day {
             case .south:    y += value
             case .west:     x -= value
             case .forward:
-                if angle == 0 { x += value }
-                if angle == 90 { y += value }
-                if angle == 180 { x -= value }
-                if angle == 270 { y -= value }
+                if angle == 0 {
+                    x += value
+                } else if angle == 90 {
+                    y += value
+                } else if angle == 180 {
+                    x -= value
+                } else if angle == 270 {
+                    y -= value
+                }
             case .unknown: return -1
             }
         }
