@@ -89,3 +89,8 @@ To run day 1:
 - After reading the question, it was obvious that we needed to bitshift, so I went about converting a string to binary (thanks stackoverflow) but I used a regex helper extension to string I made, which I used incorrectly, so that cost me lots of time. After I'd got it working, the only other complexity was forcing a bit to be zero. I kept track of bits to be 1 and bits to be 0, and applied them seperately.
 - Next part required looping through all possible combinations for certain bits, so these were generated as a power of 2 for the number of bits, then each bit was shifted to the position the bit was meant to be in. I still needed to keep track of the bits that should be 0 and should be 1, apply these and output all the memory locations as an array.
 *This has to be run on a 64-bit system to not overflow the 36-bit numbers. Some languages would have lots of additional complexity to implement this.*
+
+### Day 15 - Step back debugging
+- I initially implemented part 1 using 2 dictionaries, one that was the previous step, and one that was the current. This worked fine, for part 1, just using the value as the key and the position it was last seen as the value.
+- Turns out it did not scale for 30 million iterations. Instead of having a dictionary for the current step I just used a tuple for the next value to be added and applied it after i'd done the logic.
+*Note: The unit tests for this take about 50 seconds to run, so I've left them commented out and a loop for 3000 to test part 2 was left*

@@ -512,13 +512,28 @@ mem[26] = 1
     }
 
     let day15Input = """
+0,3,6
 """
 
     func testDay15Part1() {
-        XCTAssertEqual(Day15(input: day15Input).part1(), 0)
+        XCTAssertEqual(Day15(input: day15Input, target: 10).part1(), 0)
+        XCTAssertEqual(Day15(input: day15Input).part1(), 436)
+        XCTAssertEqual(Day15(input: "1,3,2").part1(), 1)
+        XCTAssertEqual(Day15(input: "2,1,3").part1(), 10)
+        XCTAssertEqual(Day15(input: "1,2,3").part1(), 27)
+        XCTAssertEqual(Day15(input: "2,3,1").part1(), 78)
+        XCTAssertEqual(Day15(input: "3,2,1").part1(), 438)
+        XCTAssertEqual(Day15(input: "3,1,2").part1(), 1836)
     }
 
     func testDay15Part2() {
-        XCTAssertEqual(Day15(input: day15Input).part2(), 0)
+        XCTAssertEqual(Day15(input: day15Input, target: 3000).part2(), 173)
+//        XCTAssertEqual(Day15(input: day15Input).part2(), 175594)
+//        XCTAssertEqual(Day15(input: "1,3,2").part2(), 2578)
+//        XCTAssertEqual(Day15(input: "2,1,3").part2(), 3544142)
+//        XCTAssertEqual(Day15(input: "1,2,3").part2(), 261214)
+//        XCTAssertEqual(Day15(input: "2,3,1").part2(), 6895259)
+//        XCTAssertEqual(Day15(input: "3,2,1").part2(), 18)
+//        XCTAssertEqual(Day15(input: "3,1,2").part2(), 362)
     }
 }
