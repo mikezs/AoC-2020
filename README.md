@@ -98,3 +98,4 @@ To run day 1:
 ### Day 16 - [Drop in a logic bomb](https://en.wikipedia.org/wiki/Logic_bomb#Fictional_logic_bombs)
 - After parsing all the input into a structure and utilising Swift's `ClosedRange` type part 1 was trivial to add invalid numbers to an array and sum them
 - Next part was made up of lots of operations and then a loop applying some logic until it couldn't be applied any more and reducing and multiplying the output. I really enjoyed doing this one.
+*Note: I've refactored as much as I can into functional chains while still keeping readability. This was another fun task!*

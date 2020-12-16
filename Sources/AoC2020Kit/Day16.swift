@@ -54,21 +54,11 @@ public final class Day16: Day16Protocol {
     }
 
     private func isInvalid(ticket: Ticket) -> Int? {
-        for value in ticket {
-            var found = false
-
-            fields.forEach { field in
-                if field.contains(value) {
-                    found = true
-                }
-            }
-
-            if !found {
-                return value
-            }
+        ticket.first { value in
+            fields
+                .filter { $0.contains(value) }
+                .isEmpty
         }
-
-        return nil
     }
 
     public func part1() -> Int {
@@ -77,61 +67,53 @@ public final class Day16: Day16Protocol {
             .reduce(0, +)
     }
 
-    private func fieldsPossibleIndexes(for tickets: [Ticket]) -> [Int: [Field]] {
-        var possibleFields = [Int: [Field]]()
+    private func fieldsPossibleForIndexes(for tickets: [Ticket]) -> [Int: [Field]] {
+        (0..<ticket.count)
+            .reduce([Int: [Field]]()) { dict, index in
+                dict.adding(key: index, value: fields.filter { field in
+                    tickets
+                        .map { $0[index] }
+                        .allSatisfy { field.contains($0) }
+                })
+            }
+    }
 
-        for index in 0..<ticket.count {
-            var currentFields = fields
-
-            tickets
-                .map { $0[index] }
-                .forEach {
-                    for (index, field) in currentFields.enumerated() {
-                        if !field.contains($0) {
-                            currentFields.remove(at: index)
-                            break
-                        }
-                    }
+    private func eliminate(singlePossiblityFields: [Field], from possibleFields: [Int: [Field]]) -> [Int: [Field]] {
+        possibleFields
+            .mapValues { fields in
+                if fields.count > 1 {
+                    return fields
+                        .filter { !singlePossiblityFields.contains($0) }
                 }
 
-            possibleFields[index] = currentFields
-        }
-
-        return possibleFields
+                return fields
+            }
     }
 
     private func reduceFieldsForIndexes(in possibleValidFields: [Int: [Field]]) -> [Int: [Field]] {
-        var possibleValidFields = possibleValidFields
+        var validFields = possibleValidFields
 
-        repeat {
-            let singleFields = foundFields(validFields: possibleValidFields)
-            var updatedValidFields = possibleValidFields
+        while true {
+            let singleFields = singlePossibilityFields(validFields: validFields)
 
-            for (index, fields) in possibleValidFields where fields.count > 1 {
-                var newFields = fields
-
-                for field in fields {
-                    if singleFields.contains(field) {
-                        newFields.removeAll { $0 == field }
-                    }
-                }
-
-                updatedValidFields[index] = newFields
+            if singleFields.count == ticket.count {
+                return validFields
             }
 
-            possibleValidFields = updatedValidFields
-        } while foundFields(validFields: possibleValidFields).count != ticket.count
-
-        return possibleValidFields
+            validFields = eliminate(singlePossiblityFields: singleFields, from: validFields)
+        }
     }
 
-    private func foundFields(validFields: [Int: [Field]]) -> [Field] {
-        validFields.map { $0.value }.filter { $0.count == 1 }.map { $0[0] }
+    private func singlePossibilityFields(validFields: [Int: [Field]]) -> [Field] {
+        validFields
+            .map { $0.value }
+            .filter { $0.count == 1 }
+            .map { $0[0] }
     }
 
     public var namedValues: [String: Int] {
         let filteredNearbys = nearbys.filter { isInvalid(ticket: $0) == nil }
-        let validFields = fieldsPossibleIndexes(for: filteredNearbys)
+        let validFields = fieldsPossibleForIndexes(for: filteredNearbys)
         let fieldsForIndexes = reduceFieldsForIndexes(in: validFields)
 
         return fieldsForIndexes.reduce([String: Int](), {
