@@ -148,9 +148,7 @@ public final class Day11: Day {
                 for d in 1...seats.count {
                     for i in -1...1 where (y + i * d >= 0) && (y + i * d < seats.count) {
                         for j in -1...1 where !(i == 0 && j == 0) && (x + j * d >= 0) && (x + j * d < row.count) {
-                            guard let direction = direction(j, i) else {
-                                continue
-                            }
+                            let direction = self.direction(j, i)!
 
                             if let found = foundAt[direction], found {
                                 continue
