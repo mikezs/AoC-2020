@@ -537,14 +537,56 @@ mem[26] = 1
 //        XCTAssertEqual(Day15(input: "3,1,2").part2(), 362)
     }
 
-    let day16Input = """
+    let day16Part1Input = """
+class: 1-3 or 5-7
+row: 6-11 or 33-44
+seat: 13-40 or 45-50
+
+your ticket:
+7,1,14
+
+nearby tickets:
+7,3,47
+40,4,50
+55,2,20
+38,6,12
 """
 
     func testDay16Part1() {
-        XCTAssertEqual(Day16(input: day16Input).part1(), 0)
+        XCTAssertEqual(Day16(input: day16Part1Input).part1(), 71)
     }
 
+    let day16Part2Input1 = """
+class: 0-1 or 4-19
+row: 0-5 or 8-19
+seat: 0-13 or 16-19
+
+your ticket:
+11,12,13
+
+nearby tickets:
+3,9,18
+15,1,5
+5,14,9
+"""
+
+    let day16Part2Input2 = """
+departure class: 0-1 or 4-19
+departure row: 0-5 or 8-19
+departure seat: 0-13 or 16-19
+
+your ticket:
+11,12,13
+
+nearby tickets:
+3,9,18
+15,1,5
+5,14,9
+"""
+
     func testDay16Part2() {
-        XCTAssertEqual(Day16(input: day16Input).part2(), 0)
+        XCTAssertEqual(Day16(input: day16Part2Input1).namedValues,
+                       ["class": 12, "seat": 13, "row": 11])
+        XCTAssertEqual(Day16(input: day16Part2Input2).part2(), 1716)
     }
 }

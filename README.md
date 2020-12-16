@@ -94,3 +94,7 @@ To run day 1:
 - I initially implemented part 1 using 2 dictionaries, one that was the previous step, and one that was the current. This worked fine, for part 1, just using the value as the key and the position it was last seen as the value.
 - Turns out it did not scale for 30 million iterations. Instead of having a dictionary for the current step I just used a tuple for the next value to be added and applied it after i'd done the logic.
 *Note: The unit tests for this take about 50 seconds to run, so I've left them commented out and a loop for 3000 to test part 2 was left*
+
+### Day 16 - [Drop in a logic bomb](https://en.wikipedia.org/wiki/Logic_bomb#Fictional_logic_bombs)
+- After parsing all the input into a structure and utilising Swift's `ClosedRange` type part 1 was trivial to add invalid numbers to an array and sum them
+- Next part was made up of lots of operations and then a loop applying some logic until it couldn't be applied any more and reducing and multiplying the output. I really enjoyed doing this one.
