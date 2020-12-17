@@ -589,4 +589,15 @@ nearby tickets:
                        ["class": 12, "seat": 13, "row": 11])
         XCTAssertEqual(Day16(input: day16Part2Input2).part2(), 1716)
     }
+
+    let day17Input = """
+"""
+
+    func testDay17Part1() {
+        XCTAssertEqual(Day17(input: day17Input).part1(), 0)
+    }
+
+    func testDay17Part2() {
+        XCTAssertEqual(Day17(input: day17Input).part2(), 0)
+    }
 }
