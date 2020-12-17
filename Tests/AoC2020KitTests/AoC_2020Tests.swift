@@ -591,6 +591,9 @@ nearby tickets:
     }
 
     let day17Input = """
+.#.
+..#
+###
 """
 
     func testDay17Part1() {

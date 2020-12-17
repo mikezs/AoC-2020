@@ -101,6 +101,7 @@
 		27AA5E962582C9D6007B17FB /* day11.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day11.txt; sourceTree = "<group>"; };
 		27AA5E972584DECB007B17FB /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
 		27AA5E9A2584DF0B007B17FB /* day12.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day12.txt; sourceTree = "<group>"; };
+		27C29E23258B40C700B87BBB /* day17.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day17.txt; sourceTree = "<group>"; };
 		"AoC-2020::AoC-2020::Product" /* AoC-2020-debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "AoC-2020-debug"; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020Kit::Product" /* AoC2020Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AoC2020Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"AoC-2020::AoC2020KitTests::Product" /* AoC2020KitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AoC2020KitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +183,7 @@
 				BE6E19C22587603E003A0B22 /* day14.txt */,
 				BEFF20482588B099005B0E57 /* day15.txt */,
 				BEFF20802589541A005B0E57 /* day16.txt */,
+				27C29E23258B40C700B87BBB /* day17.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
