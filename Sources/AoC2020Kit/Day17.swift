@@ -71,11 +71,11 @@ public final class Day17: Day {
         for zDimension in zIndexes {
             let currentYIndexes = cubes[zDimension]!.keys
 
-            if let currentYMin = currentYIndexes.min(), currentYMin < xMin {
+            if let currentYMin = currentYIndexes.min(), currentYMin < yMin {
                 yMin = currentYMin
             }
 
-            if let currentYMax = currentYIndexes.max(), currentYMax > xMax {
+            if let currentYMax = currentYIndexes.max(), currentYMax > yMax {
                 yMax = currentYMax
             }
 
@@ -147,10 +147,11 @@ public final class Day17: Day {
 
     private func activeNeighboursAt(x: X, y: Y, z: Z, in cubes: Cubes) -> Int {
         var active = 0
+        let range = -1...1
 
-        for zDirection in -1...1 {
-            for yDirection in -1...1 {
-                for xDirection in -1...1 where !(zDirection == 0 && yDirection == 0 && zDirection == 0) {
+        for zDirection in range {
+            for yDirection in range {
+                for xDirection in range where !(zDirection == 0 && yDirection == 0 && xDirection == 0) {
                         if cubes[z+zDirection]?[y+yDirection]?[x+xDirection] == true {
                             active += 1
                         }
