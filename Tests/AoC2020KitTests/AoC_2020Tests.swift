@@ -597,7 +597,7 @@ nearby tickets:
 """
 
     func testDay17Part1() {
-        XCTAssertEqual(Day17(input: day17Input).part1(), 0)
+        XCTAssertEqual(Day17(input: day17Input).part1(), 112)
     }
 
     func testDay17Part2() {
