@@ -108,4 +108,4 @@ To run day 1:
 ### Day 18 - Calculator
 - I wrote a full on Tokenizer/Lexer/Parser/Interpreter from an example I wrote as part of my Programming Langugages Module from Kent Uni. Unfortunately it didn't work properly, so I just used what I'm good at: Regular Expressions and string manipulation. First loop was things in brackets, second loop was the first match in [0-9]+[+*][0-9]+
 - Part 2 was changing the similar, but using a loop with `+` in the middle, then a loop with `*` in the middle.
-*Note: I want to refactor this so I can provide a regular expression, and replace it's first match with a closure result.*
+*Note: I want to refactor this so I can provide a regular expression, and replace it's first match with a closure result. **Now done.***
