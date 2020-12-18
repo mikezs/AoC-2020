@@ -256,7 +256,14 @@ public final class Day18: Day {
         let lexer = Lexer(input: line)
         let parser = Parser(lexer: lexer)
         let interpreter = Interpreter(parser: parser)
-        return try? interpreter.interpret()
+
+        do {
+            return try interpreter.interpret()
+        } catch {
+            print(error)
+        }
+
+        return nil
     }
 
     public func part1() -> Int {
