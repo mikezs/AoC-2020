@@ -4,14 +4,16 @@ protocol AbstractSyntaxTree: InterpreterResult  {}
 protocol InterpreterResult {}
 extension Int: InterpreterResult {}
 
-func + (lhs: InterpreterResult, rhs: InterpreterResult) -> InterpreterResult {
-    // Needs to be implemented
-    return 0
-}
-
 func == (lhs: Day18.Token, rhs: Day18.Token) -> Bool {
-    // Needs to be implemented
-    return false
+    switch (lhs, rhs) {
+    case let (.integer(lhsValue), .integer(rhsValue)): return lhsValue == rhsValue
+    case (.plus, .plus): return true
+    case (.multiply, .multiply): return true
+    case (.leftParenthesis, .leftParenthesis): return true
+    case (.rightParenthesis, .rightParenthesis): return true
+    case (.start, .start): return true
+    default: return false
+    }
 }
 
 public final class Day18: Day {
@@ -193,9 +195,9 @@ public final class Day18: Day {
 
         func visit(operation: Operation) throws -> InterpreterResult {
             if case .plus = operation.token {
-                return try visit(node: operation.left) + visit(node: operation.right)
+                return try add(try visit(node: operation.left), try visit(node: operation.right))
             } else if case .multiply = operation.token {
-                return try visit(node: operation.left) + visit(node: operation.right)
+                return try multiply(try visit(node: operation.left), try visit(node: operation.right))
             }
 
             throw Error.invalidOperation
@@ -207,6 +209,40 @@ public final class Day18: Day {
             }
 
             return value
+        }
+
+        func add(_ lhs: InterpreterResult, _ rhs: InterpreterResult) throws -> InterpreterResult {
+            var lhsResult = lhs
+            var rhsResult = rhs
+
+            while !(lhsResult is Int) {
+                guard let node = lhsResult as? AbstractSyntaxTree else { throw Error.invalidNode }
+                lhsResult = try visit(node: node)
+            }
+
+            while !(rhsResult is Int) {
+                guard let node = rhsResult as? AbstractSyntaxTree else { throw Error.invalidNode }
+                rhsResult = try visit(node: node)
+            }
+
+            return (lhsResult as! Int) + (rhsResult as! Int)
+        }
+
+        func multiply(_ lhs: InterpreterResult, _ rhs: InterpreterResult) throws -> InterpreterResult {
+            var lhsResult = lhs
+            var rhsResult = rhs
+
+            while !(lhsResult is Int) {
+                guard let node = lhsResult as? AbstractSyntaxTree else { throw Error.invalidNode }
+                lhsResult = try visit(node: node)
+            }
+
+            while !(rhsResult is Int) {
+                guard let node = rhsResult as? AbstractSyntaxTree else { throw Error.invalidNode }
+                rhsResult = try visit(node: node)
+            }
+
+            return (lhsResult as! Int) * (rhsResult as! Int)
         }
     }
 
