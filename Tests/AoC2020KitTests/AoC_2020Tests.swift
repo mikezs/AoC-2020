@@ -601,6 +601,6 @@ nearby tickets:
     }
 
     func testDay17Part2() {
-        XCTAssertEqual(Day17(input: day17Input).part2(), 0)
+        XCTAssertEqual(Day17(input: day17Input).part2(), 848)
     }
 }
