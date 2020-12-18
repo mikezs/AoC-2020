@@ -629,4 +629,81 @@ nearby tickets:
         XCTAssertEqual(Day18(input: "((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2").part2(), 23340)
         XCTAssertEqual(Day18(input: day18Input).part2(), 694122)
     }
+
+    let day19Input = """
+"""
+
+    func testDay19Part1() {
+        XCTAssertEqual(Day19(input: day19Input).part1(), 0)
+    }
+
+    func testDay19Part2() {
+        XCTAssertEqual(Day19(input: day19Input).part2(), 0)
+    }
+
+    let day20Input = """
+"""
+
+    func testDay20Part1() {
+        XCTAssertEqual(Day20(input: day20Input).part1(), 0)
+    }
+
+    func testDay20Part2() {
+        XCTAssertEqual(Day20(input: day20Input).part2(), 0)
+    }
+
+    let day21Input = """
+"""
+
+    func testDay21Part1() {
+        XCTAssertEqual(Day21(input: day21Input).part1(), 0)
+    }
+
+    func testDay21Part2() {
+        XCTAssertEqual(Day21(input: day21Input).part2(), 0)
+    }
+
+    let day22Input = """
+"""
+
+    func testDay22Part1() {
+        XCTAssertEqual(Day22(input: day22Input).part1(), 0)
+    }
+
+    func testDay22Part2() {
+        XCTAssertEqual(Day22(input: day22Input).part2(), 0)
+    }
+
+    let day23Input = """
+"""
+
+    func testDay23Part1() {
+        XCTAssertEqual(Day23(input: day23Input).part1(), 0)
+    }
+
+    func testDay23Part2() {
+        XCTAssertEqual(Day23(input: day23Input).part2(), 0)
+    }
+
+    let day24Input = """
+"""
+
+    func testDay24Part1() {
+        XCTAssertEqual(Day24(input: day24Input).part1(), 0)
+    }
+
+    func testDay24Part2() {
+        XCTAssertEqual(Day24(input: day24Input).part2(), 0)
+    }
+
+    let day25Input = """
+"""
+
+    func testDay25Part1() {
+        XCTAssertEqual(Day25(input: day25Input).part1(), 0)
+    }
+
+    func testDay25Part2() {
+        XCTAssertEqual(Day25(input: day25Input).part2(), 0)
+    }
 }
