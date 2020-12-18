@@ -603,4 +603,15 @@ nearby tickets:
     func testDay17Part2() {
         XCTAssertEqual(Day17(input: day17Input).part2(), 848)
     }
+
+    let day18Input = """
+"""
+
+    func testDay18Part1() {
+        XCTAssertEqual(Day18(input: day18Input).part1(), 0)
+    }
+
+    func testDay18Part2() {
+        XCTAssertEqual(Day18(input: day18Input).part2(), 0)
+    }
 }
