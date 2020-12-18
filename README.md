@@ -99,3 +99,8 @@ To run day 1:
 - After parsing all the input into a structure and utilising Swift's `ClosedRange` type part 1 was trivial to add invalid numbers to an array and sum them
 - Next part was made up of lots of operations and then a loop applying some logic until it couldn't be applied any more and reducing and multiplying the output. I really enjoyed doing this one.
 *Note: I've refactored as much as I can into functional chains while still keeping readability. This was another fun task!*
+
+### Day 17 - 3D Conways Game Of Life
+- I wrote a "proper" implementation for this splitting each logical operation into it's own function. I actually wrote it correctly first try, but I had 2 stupid copy/paste bugs that prevented me getting the correct solution.
+- Adding another dimension just meant adding another parameter to the functions.
+*Note: In the interest of time, I just over-wrote my part 1 implementation, but I plan to refactor it so I can have `n` dimensions*
