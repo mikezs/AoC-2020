@@ -11,7 +11,7 @@ func == (lhs: Day18.Token, rhs: Day18.Token) -> Bool {
     case (.multiply, .multiply): return true
     case (.leftParenthesis, .leftParenthesis): return true
     case (.rightParenthesis, .rightParenthesis): return true
-    case (.start, .start): return true
+    case (.end, .end): return true
     default: return false
     }
 }
@@ -23,7 +23,7 @@ public final class Day18: Day {
         case multiply
         case leftParenthesis
         case rightParenthesis
-        case start
+        case end
     }
 
     final class Lexer {
@@ -33,14 +33,14 @@ public final class Day18: Day {
 
         init(input: String) {
             self.input = input
-            position = input.count - 1
+            position = 0
             current = self.input[position]
         }
 
         func advance() {
-            position -= 1
+            position += 1
 
-            if position < 0 {
+            if position >= input.count {
                 current = nil
             } else {
                 current = self.input[position]
@@ -49,7 +49,7 @@ public final class Day18: Day {
 
         func skipWhitespace() {
             while current?.isWhitespace == true {
-                self.advance()
+                advance()
             }
         }
 
@@ -58,7 +58,7 @@ public final class Day18: Day {
 
             while current?.isNumber == true {
                 result += String(current!)
-                self.advance()
+                advance()
             }
 
             return Int(result)!
@@ -96,7 +96,7 @@ public final class Day18: Day {
                 }
             }
 
-            return .start
+            return .end
         }
     }
 
@@ -128,10 +128,12 @@ public final class Day18: Day {
         }
 
         func factor() throws -> AbstractSyntaxTree {
-            if case .integer = current {
+            let token = current
+
+            if case .integer = token {
                 consume()
-                return Number(token: current)
-            } else if case .rightParenthesis = current {
+                return Number(token: token)
+            } else if case .leftParenthesis = token {
                 consume()
                 let node = try expression()
                 consume()
@@ -147,9 +149,9 @@ public final class Day18: Day {
             while [Token.plus, Token.multiply].contains(current) {
                 let token = current
 
-                if case .plus = current {
+                if case .plus = token {
                     consume()
-                } else if case .multiply = current {
+                } else if case .multiply = token {
                     consume()
                 }
 
@@ -170,7 +172,6 @@ public final class Day18: Day {
             case invalidInteger
             case invalidOperation
         }
-        //typealias NodeVisitor = (AbstractSyntaxTree) -> InterpreterResult
 
         let parser: Parser
 
@@ -267,7 +268,7 @@ public final class Day18: Day {
     }
 
     public func part1() -> Int {
-        input.compactMap { result(for: $0) }.reduce(0, +)
+        input.map{ $0.replacingOccurrences(of: " ", with: "") }.compactMap { result(for: $0) }.reduce(0, +)
     }
 
     public func part2() -> Int {
