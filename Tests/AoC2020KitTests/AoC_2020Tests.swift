@@ -606,13 +606,27 @@ nearby tickets:
 
     let day18Input = """
 1 + 2 * 3 + 4 * 5 + 6
+2 * 3 + (4 * 5)
+5 + (8 * 3 + 9 + 3 * 4 * 3)
+5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))
+((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2
 """
 
     func testDay18Part1() {
-        XCTAssertEqual(Day18(input: day18Input).part1(), 3)
+        XCTAssertEqual(Day18(input: "1 + 2 * 3 + 4 * 5 + 6").part1(), 71)
+        XCTAssertEqual(Day18(input: "2 * 3 + (4 * 5)").part1(), 26)
+        XCTAssertEqual(Day18(input: "5 + (8 * 3 + 9 + 3 * 4 * 3)").part1(), 437)
+        XCTAssertEqual(Day18(input: "5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))").part1(), 12240)
+        XCTAssertEqual(Day18(input: "((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2").part1(), 13632)
+        XCTAssertEqual(Day18(input: day18Input).part1(), 26406)
     }
 
     func testDay18Part2() {
-        XCTAssertEqual(Day18(input: day18Input).part2(), 0)
+        XCTAssertEqual(Day18(input: "1 + 2 * 3 + 4 * 5 + 6").part2(), 231)
+        XCTAssertEqual(Day18(input: "2 * 3 + (4 * 5)").part2(), 46)
+        XCTAssertEqual(Day18(input: "5 + (8 * 3 + 9 + 3 * 4 * 3)").part2(), 1445)
+        XCTAssertEqual(Day18(input: "5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))").part2(), 669060)
+        XCTAssertEqual(Day18(input: "((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2").part2(), 23340)
+        XCTAssertEqual(Day18(input: day18Input).part2(), 694122)
     }
 }

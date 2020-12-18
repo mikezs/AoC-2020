@@ -104,3 +104,8 @@ To run day 1:
 - I wrote a "proper" implementation for this splitting each logical operation into it's own function. I actually wrote it correctly first try, but I had 2 stupid copy/paste bugs that prevented me getting the correct solution.
 - Adding another dimension just meant adding another parameter to the functions.
 *Note: In the interest of time, I just over-wrote my part 1 implementation, but I plan to refactor it so I can have `n` dimensions*
+
+### Day 18 - Calculator
+- I wrote a full on Tokenizer/Lexer/Parser/Interpreter from an example I wrote as part of my Programming Langugages Module from Kent Uni. Unfortunately it didn't work properly, so I just used what I'm good at: Regular Expressions and string manipulation. First loop was things in brackets, second loop was the first match in [0-9]+[+*][0-9]+
+- Part 2 was changing the similar, but using a loop with `+` in the middle, then a loop with `*` in the middle.
+*Note: I want to refactor this so I can provide a regular expression, and replace it's first match with a closure result.*
