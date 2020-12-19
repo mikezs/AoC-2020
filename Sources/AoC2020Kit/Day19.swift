@@ -2,47 +2,53 @@ import Foundation
 
 public final class Day19: Day {
     private struct Rule {
-        private struct OrRule {
+        private struct Pair {
             let left: Int
             let right: Int
         }
 
-        private let left: Int?
-        private let middle: OrRule?
-        private let right: Int?
+        private let left: Pair?
+        private let right: Pair?
         private let letter: String?
 
         init(string: String) {
-            if string.contains("|") {
-                let ruleParts = string.components(separatedBy: " ")
-                left = Int(ruleParts[0])!
-                middle = OrRule(left: Int(ruleParts[1])!, right: Int(ruleParts[3])!)
-                right = Int(ruleParts[4])!
-                letter = nil
-            } else {
+            if string.contains("\"") {
                 left = nil
-                middle = nil
                 right = nil
                 letter = String(string[1])
+            } else {
+                let ruleParts = string.components(separatedBy: " ")
+
+                if string.contains("|") {
+                    left = Pair(left: Int(ruleParts[0])!, right: Int(ruleParts[1])!)
+                    right = Pair(left: Int(ruleParts[3])!, right: Int(ruleParts[4])!)
+                    letter = nil
+                } else {
+                    left = Pair(left: Int(ruleParts[0])!, right: Int(ruleParts[1])!)
+                    right = nil
+                    letter = nil
+                }
             }
         }
 
         func description(rules: [Int: Rule]) -> String {
             if let letter = letter {
                 return letter
-            } else if let left = left, let middle = middle, let right = right {
-                let one: String = rules[left]!.description(rules: rules)
-                let two: String = rules[middle.left]!.description(rules: rules)
-
-                return "(" +
-                    one +
-                    "(" +
-                    two +
-                    "|" +
-                    rules[middle.right]!.description(rules: rules) +
-                    ")" +
-                    rules[right]!.description(rules: rules) +
-                    ")"
+            } else if let left = left {
+                if let right = right {
+                    return "(" +
+                        rules[left.left]!.description(rules: rules) +
+                        rules[left.right]!.description(rules: rules) +
+                        "|" +
+                        rules[right.left]!.description(rules: rules) +
+                        rules[right.right]!.description(rules: rules) +
+                        ")"
+                } else {
+                    return "(" +
+                        rules[left.left]!.description(rules: rules) +
+                        rules[left.right]!.description(rules: rules) +
+                        ")"
+                }
             }
             fatalError()
         }
@@ -67,8 +73,9 @@ public final class Day19: Day {
     }
 
     public func part1() -> Int {
-        let regex = rules[0]?.description(rules: rules)
-        return messages.count
+        let regex = rules[0]!.description(rules: rules)
+        print(regex)
+        return messages.filter { !$0.matches(for: regex).isEmpty }.count
     }
 
     public func part2() -> Int {
