@@ -1,24 +1,50 @@
 import Foundation
 
-protocol RuleValue {}
-extension Int: RuleValue {}
-extension String: RuleValue {}
-
 public final class Day19: Day {
     private struct Rule {
         private struct OrRule {
-            let left: RuleValue
-            let right: RuleValue
+            let left: Int
+            let right: Int
         }
 
-        private let left: RuleValue
-        private let middle: OrRule
-        private let right: RuleValue
+        private let left: Int?
+        private let middle: OrRule?
+        private let right: Int?
+        private let letter: String?
 
         init(string: String) {
-            left = 0
-            middle = OrRule(left: 0, right: 0)
-            right = 0
+            if string.contains("|") {
+                let ruleParts = string.components(separatedBy: " ")
+                left = Int(ruleParts[0])!
+                middle = OrRule(left: Int(ruleParts[1])!, right: Int(ruleParts[3])!)
+                right = Int(ruleParts[4])!
+                letter = nil
+            } else {
+                left = nil
+                middle = nil
+                right = nil
+                letter = String(string[1])
+            }
+        }
+
+        func description(rules: [Int: Rule]) -> String {
+            if let letter = letter {
+                return letter
+            } else if let left = left, let middle = middle, let right = right {
+                let one: String = rules[left]!.description(rules: rules)
+                let two: String = rules[middle.left]!.description(rules: rules)
+
+                return "(" +
+                    one +
+                    "(" +
+                    two +
+                    "|" +
+                    rules[middle.right]!.description(rules: rules) +
+                    ")" +
+                    rules[right]!.description(rules: rules) +
+                    ")"
+            }
+            fatalError()
         }
     }
 
@@ -32,15 +58,17 @@ public final class Day19: Day {
         rules = parts[0]
             .components(separatedBy: .newlines)
             .reduce([Int: Rule](), {
-                
-                $0.adding(key: $1.1)
+                let ruleParts = $1.components(separatedBy: ": ")
+                let key = Int(ruleParts[0])!
+                return $0.adding(key: key, value: Rule(string: ruleParts[1]))
             })
         messages = parts[1]
             .components(separatedBy: .newlines)
     }
 
     public func part1() -> Int {
-        0
+        let regex = rules[0]?.description(rules: rules)
+        return messages.count
     }
 
     public func part2() -> Int {
