@@ -631,10 +631,17 @@ nearby tickets:
     }
 
     let day19Input = """
+0: 1 2
+1: "a"
+2: 1 3 | 3 1
+3: "b"
+
+aab
+aba
 """
 
     func testDay19Part1() {
-        XCTAssertEqual(Day19(input: day19Input).part1(), 0)
+        XCTAssertEqual(Day19(input: day19Input).part1(), 2)
     }
 
     func testDay19Part2() {
