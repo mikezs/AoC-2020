@@ -112,3 +112,5 @@ To run day 1:
 
 ### Day 19 - The Giant Regular Expression
 - I used recursion to generate a massive regular expression (3751 characters) and just put it into the Swift `NSRegularExpression` class to parse my input. It's incredibly fast because a deterministic finite automata is created and runs a filter over the input.
+- Part 2 required modifications to my regex generation to replace the rules, but I don't want to handle loops, so I generated (some) sub-matches that are a subset of the infinite problem.
+*Note: the 3 extra is a magic number. The solution should work for >n extra sub-sets, where n is the exact number. 4 gives the same result (how I knew it was correct) but 5, 6, 7, 8, 9 and 10 give the wrong answer.*
