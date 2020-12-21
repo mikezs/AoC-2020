@@ -54,14 +54,14 @@ public final class Day20: Day {
     }
 
     private func connect(tiles: [Tile]) {
-        //let sideLength = Int(Double(tiles.count).squareRoot())
-        var sides = [Int: (Tile.Side, Tile)]()
-
-        for tile in tiles {
-            for (side, values) in tile.sides {
-                //sides[]
-            }
-        }
+//        let sideLength = Int(Double(tiles.count).squareRoot())
+//        var sides = [Int: (Tile.Side, Tile)]()
+//
+//        for tile in tiles {
+//            for (side, values) in tile.sides {
+//                //sides[]
+//            }
+//        }
     }
 
     public func part1() -> Int {
