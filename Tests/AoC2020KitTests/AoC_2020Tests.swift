@@ -834,10 +834,14 @@ Tile 3079:
     }
 
     let day21Input = """
+mxmxvkd kfcds sqjhc nhms (contains dairy, fish)
+trh fvjkl sbzzf mxmxvkd (contains dairy)
+sqjhc fvjkl (contains soy)
+sqjhc mxmxvkd sbzzf (contains fish)
 """
 
     func testDay21Part1() {
-        XCTAssertEqual(Day21(input: day21Input).part1(), 0)
+        XCTAssertEqual(Day21(input: day21Input).part1(), 5)
     }
 
     func testDay21Part2() {
