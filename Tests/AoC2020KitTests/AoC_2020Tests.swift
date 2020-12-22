@@ -864,12 +864,24 @@ Player 2:
 10
 """
 
+    let day22Part2Input = """
+Player 1:
+43
+19
+
+Player 2:
+2
+29
+14
+"""
+
     func testDay22Part1() {
         XCTAssertEqual(Day22(input: day22Input).part1(), 306)
     }
 
     func testDay22Part2() {
-        XCTAssertEqual(Day22(input: day22Input).part2(), 0)
+        XCTAssertEqual(Day22(input: day22Input).part2(), 291)
+        XCTAssertEqual(Day22(input: day22Part2Input).part2(), 105)
     }
 
     let day23Input = """

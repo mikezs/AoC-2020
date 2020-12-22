@@ -114,3 +114,12 @@ To run day 1:
 - I used recursion to generate a massive regular expression (3751 characters) and just put it into the Swift `NSRegularExpression` class to parse my input. It's incredibly fast because a deterministic finite automata is created and runs a filter over the input.
 - Part 2 required modifications to my regex generation to replace the rules, but I don't want to handle loops, so I generated (some) sub-matches that are a subset of the infinite problem.
 *Note: the 3 extra is a magic number. The solution should work for >n extra sub-sets, where n is the exact number. 4 gives the same result (how I knew it was correct) but 5, 6, 7, 8, 9 and 10 give the wrong answer.*
+
+### Day 20
+
+### Day 21
+
+### Day 22 - Card game 
+- Implementing a few rules and then running the game until a winner was found for part 1, relatively straight forward. I had gambled that another player would be introduced and made it do any number of players could play the game.
+- However, there was recursion introduced in the game, so some rounds were played recursively. Luckily an array of hashable items is also hashable, so I just used the hash for each players deck to check if they had played it before.
+*Note: I could have refactored more of the common elements out into static functions, so this will be an exercise when I get more time.*

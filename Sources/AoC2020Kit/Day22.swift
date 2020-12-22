@@ -87,10 +87,52 @@ public final class Day22: Day {
                     return (0, game)
                 }
 
-                hashedDecks[player]?.append(deckHash)
+                hashedDecks[player] = (hashedDecks[player] ?? []) + [deckHash]
             }
 
-            
+            // Draw cards and check if we need to play a sub-game
+            var playedCards = [Card: Player]()
+            var shouldPlaySubGame = true
+            var subGame = Game()
+
+            for playerNumber in 0..<game.count {
+                let playedCard = game[playerNumber].remove(at: 0)
+                shouldPlaySubGame = shouldPlaySubGame && game[playerNumber].count >= playedCard
+
+                if shouldPlaySubGame {
+                    subGame.append(Array(game[playerNumber][0..<playedCard]))
+                }
+
+                playedCards[playedCard] = playerNumber
+            }
+
+            // Determine the winner
+            let roundWinner: Player
+            let sortedCards: [Card]
+
+            if shouldPlaySubGame {
+                let (subGameWinner, _) = winner(of: subGame)
+                roundWinner = subGameWinner
+                sortedCards = playedCards
+                    .sorted { lhs, _ in lhs.value == roundWinner }
+                    .map { $0.key }
+            } else {
+                sortedCards = playedCards.keys.sorted().reversed()
+                roundWinner = playedCards[sortedCards[0]]!
+            }
+
+            // Add the cards to the appropriate deck
+            game[roundWinner] += sortedCards
+
+            // Check if someone won
+            let aPlayerHasWon = game
+                .enumerated()
+                .filter { $0.0 != roundWinner }
+                .allSatisfy { $0.1.count == 0 }
+
+            if aPlayerHasWon {
+                winningPlayer = roundWinner
+            }
         }
 
         if let winningPlayer = winningPlayer {
