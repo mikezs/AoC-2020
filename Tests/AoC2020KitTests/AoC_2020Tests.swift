@@ -849,10 +849,23 @@ sqjhc mxmxvkd sbzzf (contains fish)
     }
 
     let day22Input = """
+Player 1:
+9
+2
+6
+3
+1
+
+Player 2:
+5
+8
+4
+7
+10
 """
 
     func testDay22Part1() {
-        XCTAssertEqual(Day22(input: day22Input).part1(), 0)
+        XCTAssertEqual(Day22(input: day22Input).part1(), 306)
     }
 
     func testDay22Part2() {
