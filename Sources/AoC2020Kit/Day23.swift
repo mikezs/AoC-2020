@@ -1,69 +1,176 @@
 import Foundation
 
 public final class Day23: Day {
-    public typealias CupValue = Int
-    public typealias CupIndex = Int
+    public final class DoubleLinkedCircleList<T: Hashable> {
+        enum Error: Swift.Error {
+            case itemNotInList
+        }
 
-    private let input: [CupValue]
+        public final class Item {
+            var next: Item!
+            var previous: Item!
+            let value: T
 
-    public init(input: String) {
-        self.input = input.trimmedLines[0].compactMap { Int(String($0)) }
-    }
+            init(_ value: T) {
+                self.value = value
+                next = self
+                previous = self
+            }
+        }
 
-    public static func play(with cups: inout [CupValue], moves: Int) {
-        var currentCupIndex = 0
-        var currentCupValue: CupValue
-        var destinationCupValue: CupValue?
+        public private(set) var start: Item?
+        private var dict = [T: [Item]]()
+        public var count: Int {
+            //dict.values.map { $0.count }.reduce(0, +)
+            dict.keys.count
+        }
 
-        for move in 0 ..< moves {
-            print("move \(move)")
-            currentCupValue = cups[currentCupIndex]
+        /// Add item with value to the end of the list
+        @discardableResult
+        public func addItem(with value: T) -> Item {
+            let item = Item(value)
+            add(item)
+            return item
+        }
 
-            // Re-order array so current cup is 0th
-            while cups.first != currentCupValue {
-                cups.append(cups.removeFirst())
+        /// Add item to the end of the list
+        public func add(_ item: Item) {
+            if let end = start?.previous {
+                end.next = item
+                item.previous = end
+                item.next = start
+                start?.previous = item
+            } else {
+                start = item
+                item.next = item
+                item.previous = item
             }
 
+            addToDict(item: item)
+        }
+
+        /// Remove an item and return it. It's links are kept, but it is no longer in the list
+        public func remove(item: Item) throws {
+            if dict[item.value]?.count ?? 0 == 0 {
+                throw Error.itemNotInList
+            }
+
+            let previous = item.previous
+            let next = item.next
+
+            previous?.next = next
+            next?.previous = previous
+
+            if item === start {
+                start = item.next
+            }
+
+            dict[item.value]?.removeAll { $0 === item }
+        }
+
+        /// Find and item in the list
+        public func items(of value: T) -> [Item] {
+            dict[value] ?? []
+        }
+
+        public func first(of value: T) -> Item? {
+            items(of: value).first
+        }
+
+        /// Insert an item after an item already in the list
+        public func insert(item: Item, after: Item) {
+            let next = after.next
+
+            after.next = item
+            item.previous = after
+            item.next = next
+            next?.previous = item
+
+            addToDict(item: item)
+        }
+
+        public func insert(items: [Item], after: Item) {
+            var currentItem = after
+
+            for item in items {
+                insert(item: item, after: currentItem)
+                currentItem = item
+            }
+        }
+
+        public func insert(values: [T], after: Item) {
+            var currentItem = after
+
+            for value in values {
+                let item = Item(value)
+                insert(item: item, after: currentItem)
+                currentItem = item
+            }
+        }
+
+        private func addToDict(item: Item) {
+            dict[item.value] = (dict[item.value] ?? []) + [item]
+        }
+    }
+
+    public typealias CupValue = Int
+
+    private let input: DoubleLinkedCircleList<CupValue>
+
+    public init(input: String) {
+        self.input = DoubleLinkedCircleList<CupValue>()
+        input
+            .trimmedLines[0]
+            .compactMap { Int(String($0)) }
+            .forEach { self.input.addItem(with: $0) }
+    }
+
+    public static func play(with cups: DoubleLinkedCircleList<CupValue>, moves: Int) {
+        var currentCup = cups.start!
+        var currentCupValue: CupValue
+        var destinationCup: DoubleLinkedCircleList<CupValue>.Item!
+
+        for move in 0 ..< moves {
+            //print("move \(move)")
             //print("cups: \(cups.map { String($0) }.joined(separator: " "))")
+
+            currentCupValue = currentCup.value
 
             // Pick 3 cups, remove cups from array
             var pickedUp = [CupValue]()
 
             for _ in 0 ..< 3 {
-                pickedUp.append(cups.remove(at: 1))
+                let item = currentCup.next!
+                try? cups.remove(item: item)
+                pickedUp.append(item.value)
             }
 
             //print("pick up: \(pickedUp.map { String($0) }.joined(separator: " "))")
 
-            // Pick destination cup index
-            destinationCupValue = nil
+            // Pick destination cup
+            destinationCup = nil
             var destinationCupValueTest = currentCupValue - 1
 
-            while destinationCupValue == nil {
-                if cups.contains(destinationCupValueTest) {
-                    destinationCupValue = destinationCupValueTest
+            while destinationCup == nil {
+                if let item = cups.first(of: destinationCupValueTest) {
+                    destinationCup = item
                     break
                 }
 
                 destinationCupValueTest -= 1
 
                 if destinationCupValueTest < 1 {
-                    destinationCupValueTest = 9
+                    destinationCupValueTest = cups.count
                 }
             }
 
             //print("destination: \(String(destinationCupValue!))")
 
-            // Re-order array so destination cup is 0th
-            while cups.first != destinationCupValue {
-                cups.append(cups.removeFirst())
-            }
-
             // Insert cups after destination cup
-            cups.insert(contentsOf: pickedUp, at: 1)
+            cups.insert(values: pickedUp, after: destinationCup)
 
             // Set new current cup index
-            currentCupIndex = (cups.firstIndex(of: currentCupValue)! + 1) % cups.count
+            currentCup = currentCup.next
         }
     }
 
@@ -72,32 +179,31 @@ public final class Day23: Day {
     }
 
     public func part1(moves: Int) -> Int {
-        var cups = input
+        Day23.play(with: input, moves: moves)
 
-        Day23.play(with: &cups, moves: moves)
-
-        let indexOfOne = cups.firstIndex(of: 1)!
+        var item = input.first(of: 1)!.next!
         var result = ""
 
-        for index in 1 ..< cups.count {
-            result += String(cups[(indexOfOne + index) % cups.count])
+        for _ in 1 ..< input.count {
+            result += String(item.value)
+            item = item.next
         }
 
         return Int(result)!
     }
 
     public func part2() -> Int {
-        var cups = input
-
-        while cups.count < 1000000 {
-            cups.append(cups.count + 1)
+        for value in input.count + 1 ... 1000000 {
+            input.addItem(with: value)
         }
 
-        Day23.play(with: &cups, moves: 10000000)
+        Day23.play(with: input, moves: 10000000)
 
-        let indexOfOne = cups.firstIndex(of: 1)!
+        let oneItem = input.first(of: 1)!
+        let afterOneItem = oneItem.next!
 
-        return cups[(indexOfOne + 1) % cups.count] * cups[(indexOfOne + 2) % cups.count]
+        // 1730691995 too low
+        return afterOneItem.value * afterOneItem.next.value
     }
 }
 
