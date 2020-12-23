@@ -12,6 +12,7 @@ public final class Day23: Day {
 
     public static func play(with cups: inout [CupValue], moves: Int) {
         var currentCupIndex = 0
+        let cupsCount = cups.count
         var currentCupValue: CupValue
         var destinationCupValue: CupValue?
 
@@ -48,7 +49,7 @@ public final class Day23: Day {
                 destinationCupValueTest -= 1
 
                 if destinationCupValueTest < 1 {
-                    destinationCupValueTest = 9
+                    destinationCupValueTest = cupsCount
                 }
             }
 
