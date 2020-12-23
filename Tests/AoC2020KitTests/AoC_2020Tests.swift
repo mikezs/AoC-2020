@@ -890,11 +890,11 @@ Player 2:
 
     func testDay23Part1() {
         XCTAssertEqual(Day23(input: day23Input).part1(moves: 10), 92658374)
-        //XCTAssertEqual(Day23(input: day23Input).part1(), 67384529)
+        XCTAssertEqual(Day23(input: day23Input).part1(), 67384529)
     }
 
     func testDay23Part2() {
-        XCTAssertEqual(Day23(input: day23Input).part2(), 0)
+        //XCTAssertEqual(Day23(input: day23Input).part2(), 149245887792)
     }
 
     let day24Input = """
