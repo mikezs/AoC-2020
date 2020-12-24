@@ -47,6 +47,7 @@
 		BE617805257932B400016CA3 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE617804257932B400016CA3 /* Day4.swift */; };
 		BE6E19B52587602C003A0B22 /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6E19B42587602C003A0B22 /* Day14.swift */; };
 		BEBE7F3D258A8E0B00112069 /* Day17.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBE7F3C258A8E0B00112069 /* Day17.swift */; };
+		BEBE7F5D25949B9200112069 /* DoubleLinkedCircleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBE7F5C25949B9200112069 /* DoubleLinkedCircleList.swift */; };
 		BEFF203B2588B06E005B0E57 /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFF203A2588B06E005B0E57 /* Day15.swift */; };
 		BEFF206D2589537C005B0E57 /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFF206C2589537C005B0E57 /* Day16.swift */; };
 		OBJ_26 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
@@ -141,6 +142,7 @@
 		BE6E19B42587602C003A0B22 /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
 		BE6E19C22587603E003A0B22 /* day14.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day14.txt; sourceTree = "<group>"; };
 		BEBE7F3C258A8E0B00112069 /* Day17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17.swift; sourceTree = "<group>"; };
+		BEBE7F5C25949B9200112069 /* DoubleLinkedCircleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedCircleList.swift; sourceTree = "<group>"; };
 		BEFF203A2588B06E005B0E57 /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
 		BEFF20482588B099005B0E57 /* day15.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day15.txt; sourceTree = "<group>"; };
 		BEFF206C2589537C005B0E57 /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				27C29E2F258D558200B87BBB /* Day23.swift */,
 				27C29E31258D558600B87BBB /* Day24.swift */,
 				27C29E33258D559F00B87BBB /* Day25.swift */,
+				BEBE7F5C25949B9200112069 /* DoubleLinkedCircleList.swift */,
 			);
 			name = AoC2020Kit;
 			path = Sources/AoC2020Kit;
@@ -462,6 +465,7 @@
 				27C29E32258D558600B87BBB /* Day24.swift in Sources */,
 				27C29E28258D552D00B87BBB /* Day19.swift in Sources */,
 				27C29E2E258D558100B87BBB /* Day22.swift in Sources */,
+				BEBE7F5D25949B9200112069 /* DoubleLinkedCircleList.swift in Sources */,
 				BE6177F925792EB200016CA3 /* Day.swift in Sources */,
 				27685B0A257ECBC600F02434 /* Day8.swift in Sources */,
 				27685B06257CD2F900F02434 /* Day7.swift in Sources */,
